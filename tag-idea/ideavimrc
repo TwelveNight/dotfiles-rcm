@@ -27,6 +27,21 @@ set incsearch
 set ideajoin
 set ideastatusicon=gray
 "set relativenumber
+" 显示当前模式
+set showmode
+" 共享系统粘贴板
+set clipboard+=unnamed
+" 开启语法高亮功能
+syntax enable
+" 忽略大小写 (该命令配合smartcase使用较好，否则不要开启)
+set ignorecase
+" 模式查找时智能忽略大小写
+set smartcase
+" vim自身命令行模式智能补全
+set wildmenu
+" 总是显示状态栏
+set laststatus=2
+
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
@@ -53,6 +68,13 @@ nnoremap <Leader>p :<C-u>action RecentProjectListGroup<CR>
 map <C-n> <Plug>NextWholeOccurrence
 map <C-p> <Plug>RemoveOccurrence
 map <C-m> <Plug>SkipOccurrence
+
+" Focus center or current cursor position after \"J\"
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+" nnoremap j jzz
+" nnoremap k kzz
 
 " Quit normal mode
 nnoremap <Leader>q  :q<CR>
@@ -143,9 +165,15 @@ nnoremap gp :action FindInPath<CR>
 nnoremap gh :action Back<CR>
 nnoremap gl :action Forward<CR>
 
+
+" action
 map <c-r> :action RecentFiles<CR>
 nnoremap <leader>cr :action Run<CR>
 nnoremap <leader>cc :action Stop<CR>
+" Select All
+nnoremap <leader>a :action $SelectAll<CR>
+" New File
+nnoremap <leader>n :action NewFile<CR>
 
 " Emulatessymotion-f) NERDTree
 " Basic Commands:
