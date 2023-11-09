@@ -6,7 +6,7 @@
   "security.workspace.trust.untrustedFiles": "newWindow",
   "security.workspace.trust.startupPrompt": "never",
   "security.workspace.trust.enabled": false,
-  "editor.minimap.side": "left",
+  // "editor.minimap.side": "left",
   "editor.fontFamily": "'Maple Mono', 'monospace', monospace",
   "extensions.autoUpdate": false,
   // "workbench.statusBar.visible": false,
@@ -14,6 +14,73 @@
   "terminal.explorerKind": "both",
   "terminal.sourceControlRepositoriesKind": "both",
   "telemetry.telemetryLevel": "off",
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "C_Cpp.autocompleteAddParentheses": true,
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google}",
+  "C_Cpp.formatting": "disabled",
+  "C_Cpp.vcFormat.indent.braces": true,
+  "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+  "clang-format.executable": "clang-format",
+  "clangd.onConfigChanged": "restart",
+  "clangd.arguments": [
+    // "--compile-commands-dir=${workspaceFolder}/build", // compile data base path
+    "--query-driver=/usr/bin/clang-*,/usr/bin/g++-*",
+    "--background-index", // 后台建立索引，并持久化到disk
+    "--clang-tidy", // 开启clang-tidy
+    "--completion-style=detailed",
+    "--header-insertion=iwyu",
+    "--pch-storage=memory",
+    // 启用这项时，补全函数时，将会给参数提供占位符，键入后按 Tab 可以切换到下一占位符
+    "--function-arg-placeholders=false",
+    "--log=verbose",
+    // 输入建议中，已包含头文件的项与还未包含头文件的项会以圆点加以区分
+    "--header-insertion-decorators",
+    "-j=12",
+    "--pretty",
+    "--inlay-hints=true"
+    // 建议排序模型
+  ],
+  "cmake.cmakePath": "cmake",
+  "cmake.build.workspaceTargets": [],
+  "cmake.configureOnOpen": true,
+  "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+  "cmake.cpptools.intelliSenseMode": "gcc-x64",
+  "editor.formatOnSaveMode": "modifications",
+  "editor.mouseWheelZoom": true,
+  "editor.tabCompletion": "on",
+  "errorLens.enabledDiagnosticLevels": [
+    "warning",
+    "error"
+  ],
   /* vim settings start */
   "vim.camelCaseMotion.enable": true,
   "vim.easymotion": true,
@@ -448,5 +515,6 @@
     "statusBar.foreground": "#ffffff",
     "statusBar.debuggingForeground": "#ffffff"
   },
-    "workbench.colorTheme": "Decay-Green",
+  "workbench.colorTheme": "Decay-Green",
+  "workbench.iconTheme": "vscode-icons",
 }

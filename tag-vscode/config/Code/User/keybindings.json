@@ -268,7 +268,7 @@
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
 	},
 	{ // toggle terminal
-		"key": "ctrl+\\",
+		"key": "ctrl+\/",
 		"command": "workbench.action.terminal.toggleTerminal",
 		"when": "terminal.active"
 	},
@@ -692,5 +692,9 @@
 		"key": "ctrl+u",
 		"command": "-list.focusPageUp",
 		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "ctrl+=",
+		"command": "workbench.action.zoomIn"
 	}
 ]
