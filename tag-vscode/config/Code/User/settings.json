@@ -517,4 +517,6 @@
   },
   "workbench.colorTheme": "Decay-Green",
   "workbench.iconTheme": "vscode-icons",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono'",
 }
