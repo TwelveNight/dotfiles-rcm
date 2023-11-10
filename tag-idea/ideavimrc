@@ -197,11 +197,12 @@ let g:NERDTreeMapJumpParentNode='h'
 map <leader>e :NERDTree<CR>
 map <leader>E :NERDTreeClose<CR>
 
+
 " easymotion
+" need AceJump and IdeaVim-EasyMotion plugins
 " easymotion-s Search backward
 " easymotion-f Search forward
-Plug 'easymotion/vim-easymotion'
-map <leader>F <Plug>(easymotion-s)
-map <leader>f <Plug>(easymotion-f)
+map F <Plug>(easymotion-s)
+map f <Plug>(easymotion-f)
 
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
