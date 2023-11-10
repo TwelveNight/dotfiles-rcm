@@ -67,7 +67,7 @@ nnoremap <Leader>p :<C-u>action RecentProjectListGroup<CR>
 " but we should finally support vim-visual-multi because vim-multiple-cursors is deprecated now
 map <C-n> <Plug>NextWholeOccurrence
 map <C-p> <Plug>RemoveOccurrence
-map <C-m> <Plug>SkipOccurrence
+map <C-u> <Plug>SkipOccurrence
 
 " Focus center or current cursor position after \"J\"
 nnoremap n nzzzv
@@ -168,6 +168,8 @@ nnoremap gl :action Forward<CR>
 
 " action
 map <c-r> :action RecentFiles<CR>
+map <leader>r :action RecentFiles<CR>
+nnoremap <leader>g :action ActivateCommitToolWindow<CR>
 nnoremap <leader>cr :action Run<CR>
 nnoremap <leader>cc :action Stop<CR>
 " Select All
