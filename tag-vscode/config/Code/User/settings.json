@@ -1,4 +1,5 @@
 {
+  "workbench.colorTheme": "Tokyo-Night",
   "window.menuBarVisibility": "toggle",
   "editor.fontSize": 18,
   "editor.scrollbar.vertical": "hidden",
@@ -6,7 +7,7 @@
   "security.workspace.trust.untrustedFiles": "newWindow",
   "security.workspace.trust.startupPrompt": "never",
   "security.workspace.trust.enabled": false,
-  // "editor.minimap.side": "left",
+  //"editor.minimap.side": "left",
   "editor.fontFamily": "'Maple Mono', 'monospace', monospace",
   "extensions.autoUpdate": false,
   // "workbench.statusBar.visible": false,
@@ -74,7 +75,6 @@
   "cmake.configureOnOpen": true,
   "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
   "cmake.cpptools.intelliSenseMode": "gcc-x64",
-  "editor.formatOnSaveMode": "modifications",
   "editor.mouseWheelZoom": true,
   "editor.tabCompletion": "on",
   "errorLens.enabledDiagnosticLevels": [
@@ -145,6 +145,15 @@
     },
     {
       "before": [
+        "K"
+      ],
+      "commands": [
+        // "editor.action.showDefinitionPreviewHover"
+        "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
         "<leader>",
         "f"
       ],
@@ -160,6 +169,26 @@
       ],
       "commands": [
         "workbench.action.closeEditorsInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
       ]
     },
     {
@@ -342,7 +371,38 @@
         "g"
       ]
     },
-    // 显示设置
+    // easy motion
+    {
+      "before": [
+        "s"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "s"
+      ]
+    },
+    {
+      "before": [
+        "f"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "f"
+      ]
+    },
+    {
+      "before": [
+        "F"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "F"
+      ]
+    },
+    // open settings
     {
       "before": [
         "<leader>",
@@ -356,7 +416,7 @@
     {
       "before": [
         "<leader>",
-        "|"
+        "\\"
       ],
       "commands": [
         "workbench.action.splitEditor"
@@ -505,7 +565,13 @@
       "key": "m",
       "name": "open extension market",
       "type": "command"
-    }
+    },
+    {
+      "command": "workbench.action.files.openFolderViaWorkspace",
+      "key": "p",
+      "name": "open folder",
+      "type": "command"
+    },
   ],
   "files.autoSave": "afterDelay", // 自动保存
   "workbench.colorCustomizations": {
@@ -515,8 +581,15 @@
     "statusBar.foreground": "#ffffff",
     "statusBar.debuggingForeground": "#ffffff"
   },
-  "workbench.colorTheme": "Decay-Green",
   "workbench.iconTheme": "vscode-icons",
-  "terminal.integrated.fontSize": 18,
   "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono'",
+  "terminal.integrated.fontSize": 18,
+  "window.zoomLevel": 1,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1,
+    "vscode.git": 5
+  },
+  "editor.formatOnSave": true,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "code-runner.runInTerminal": true,
 }
