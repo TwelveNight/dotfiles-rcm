@@ -1,11 +1,35 @@
+### EXPORT ###
+
+set fish_greeting # Supresses fish's intro message
+# set TERM xterm-256color # Sets the terminal type
+set -g -x TERM xterm-kitty
+set -x EDITOR nvim # $EDITOR use nvim in terminal
+set -x VISUAL nvim # $VISUAL use nvim in GUI mode
+
+### ADDING TO THE PATH
+# First line removes the path; second line sets it.  Without the first line,
+# your path gets massive and fish becomes very slow.
+set -e fish_user_paths
+set -U fish_user_paths $HOME/.bin $HOME/.local/bin $HOME/Applications $fish_user_paths
+
+
+### SET MANPAGER
+### Uncomment only one of these!
+
+### "bat" as manpager
+#set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
+### "vim" as manpager
+# set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+
+### "nvim" as manpager
+set -x MANPAGER "nvim -c 'set ft=man' -"
 
 # SET RANGER SELFCONFIG #
 set -g -x RANGER_LOAD_DEFAULT_RC = FALSE
 
 # SET RANGER SELFCONFIG #
 set -g -x RANGER_LOAD_DEFAULT_RC = FALSE
-
-### PATH ###
 
 # ADD NPM PATH #
 set -x PATH /home/night/.npm-global/bin $PATH
@@ -27,7 +51,7 @@ set -g -x PATH $HOME/go/bin $PATH
 set -g -x SSH_AUTH_SOCK $HOME/.1password/agent.sock
 
 # ADD aliyunpan PATH #
-set -g -x ALIYUNPAN_CONFIG_DIR $HOME/aliyunpan
+# set -g -x ALIYUNPAN_CONFIG_DIR $HOME/aliyunpan
 
 
 # ADD db pssword

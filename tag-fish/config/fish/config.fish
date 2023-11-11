@@ -1,41 +1,61 @@
-### ADDING TO THE PATH
-# First line removes the path; second line sets it.  Without the first line,
-# your path gets massive and fish becomes very slow.
-set -e fish_user_paths
-set -U fish_user_paths $HOME/.bin $HOME/.local/bin $HOME/Applications $fish_user_paths
-
-
-
-### EXPORT ###
-set fish_greeting # Supresses fish's intro message
-# set TERM xterm-256color # Sets the terminal type
-set -g -x TERM xterm-kitty
-set -x EDITOR nvim # $EDITOR use nvim in terminal
-set -x VISUAL nvim # $VISUAL use nvim in GUI mode
-
-
-
-### SET MANPAGER
-### Uncomment only one of these!
-
-### "bat" as manpager
-#set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-
-### "vim" as manpager
-# set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
-
-### "nvim" as manpager
-set -x MANPAGER "nvim -c 'set ft=man' -"
-
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
-    #先用默认的吧,vi还没学
     fish_default_key_bindings
     # fish_vi_key_bindings
 end
 ### END OF VI MODE ###
 
-
+### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
+# # 设置建议文本的颜色（灰色）
+# set fish_color_autosuggestion '#5f5f5f'
+#
+# # 设置命令文本的颜色（青色）
+# set fish_color_command '#00afaf'
+#
+# # 设置注释文本的颜色（绿色）
+# set fish_color_comment '#87af87'
+#
+# # 设置当前工作目录的颜色（紫色）
+# set fish_color_cwd '#d75f87'
+#
+# # 恢复默认文本颜色
+# set fish_color_end normal
+#
+# # 设置错误消息的颜色（亮红色）
+# set fish_color_error '#ff5f5f'
+#
+# # 设置Escape代码的颜色（橙色）
+# set fish_color_escape_escape '#ff8700'
+#
+# # 设置当前历史记录项的颜色（深红色）
+# set fish_color_history_current '#d70000'
+#
+# # 设置操作符的颜色（橙色）
+# set fish_color_operator '#ffaf5f'
+#
+# # 设置参数的颜色（蓝绿色）
+# set fish_color_param '#5fafd7'
+#
+# # 恢复默认文本颜色
+# set fish_color_normal normal
+#
+# # 设置引号中的文本颜色（棕色）
+# set fish_color_quote '#d7af87'
+#
+# # 设置重定向符的颜色（亮黄色）
+# set fish_color_redirection '#ffaf00'
+#
+# # 设置搜索匹配项的颜色（粉色）
+# set fish_color_search_match '#d75faf'
+#
+# # 设置选择文本的颜色（蓝色）
+# set fish_color_selection '#005fd7'
+#
+# # 设置命令完成的颜色（绿色）
+# set fish_color_tab_complete '#00d700'
+#
+# # 设置有效路径的颜色（深绿色）
+# set fish_color_valid_path '#5fd700'
 
 ### SPARK ###
 set -g spark_version 1.0.0
@@ -90,8 +110,6 @@ function spark -d "sparkline generator"
     '
 end
 ### END OF SPARK ###
-
-
 
 ### FUNCTIONS ###
 # Spark functions
@@ -203,62 +221,6 @@ end
 
 ### END OF FUNCTIONS ###
 
-
-
-### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
-# # 设置建议文本的颜色（灰色）
-# set fish_color_autosuggestion '#5f5f5f'
-#
-# # 设置命令文本的颜色（青色）
-# set fish_color_command '#00afaf'
-#
-# # 设置注释文本的颜色（绿色）
-# set fish_color_comment '#87af87'
-#
-# # 设置当前工作目录的颜色（紫色）
-# set fish_color_cwd '#d75f87'
-#
-# # 恢复默认文本颜色
-# set fish_color_end normal
-#
-# # 设置错误消息的颜色（亮红色）
-# set fish_color_error '#ff5f5f'
-#
-# # 设置Escape代码的颜色（橙色）
-# set fish_color_escape_escape '#ff8700'
-#
-# # 设置当前历史记录项的颜色（深红色）
-# set fish_color_history_current '#d70000'
-#
-# # 设置操作符的颜色（橙色）
-# set fish_color_operator '#ffaf5f'
-#
-# # 设置参数的颜色（蓝绿色）
-# set fish_color_param '#5fafd7'
-#
-# # 恢复默认文本颜色
-# set fish_color_normal normal
-#
-# # 设置引号中的文本颜色（棕色）
-# set fish_color_quote '#d7af87'
-#
-# # 设置重定向符的颜色（亮黄色）
-# set fish_color_redirection '#ffaf00'
-#
-# # 设置搜索匹配项的颜色（粉色）
-# set fish_color_search_match '#d75faf'
-#
-# # 设置选择文本的颜色（蓝色）
-# set fish_color_selection '#005fd7'
-#
-# # 设置命令完成的颜色（绿色）
-# set fish_color_tab_complete '#00d700'
-#
-# # 设置有效路径的颜色（深绿色）
-# set fish_color_valid_path '#5fd700'
-
-
-
 ### PROMPT ###
 # This is a theme called 'sashimi'
 function fish_prompt
@@ -333,9 +295,7 @@ end
 function _is_git_dirty
     echo (command git status -s --ignore-submodules=dirty 2>/dev/null)
 end
-### END OF PROMPT #### SET EDITOR #
-
-
+### END OF PROMPT ###
 
 if status --is-interactive
     # Your interactive shell commands here
