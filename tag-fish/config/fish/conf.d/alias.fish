@@ -20,7 +20,7 @@ alias .5='cd ../../../../..'
 
 # vim
 alias vim='nvim'
-alias vi='nvim'
+alias vi='vim'
 
 # Changing "ls" to "exa"
 # alias ls='exa -al --color=always --group-directories-first' # my preferred listing
