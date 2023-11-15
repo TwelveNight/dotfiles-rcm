@@ -61,7 +61,7 @@ map <leader>o <Action>(FileStructurePopup)
 
 nnoremap <leader>c :action CommentByLineComment<CR>
 
-nnoremap <Leader>p :<C-u>action RecentProjectListGroup<CR>
+nnoremap <Leader>p :action OpenFile<CR>
 
 " <C-n> seems to me as a better solution than <M-n>,
 " but we should finally support vim-visual-multi because vim-multiple-cursors is deprecated now

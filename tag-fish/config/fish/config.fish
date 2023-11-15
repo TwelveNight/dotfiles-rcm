@@ -1,3 +1,5 @@
+zoxide init fish --cmd cd | source
+
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
     fish_default_key_bindings
@@ -300,6 +302,8 @@ end
 if status --is-interactive
     # Your interactive shell commands here
     pyenv init - | source
+
 end
 
 thefuck --alias | source
+bind \cs __ethp_commandline_toggle_sudo

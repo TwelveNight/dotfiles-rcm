@@ -1,4 +1,3 @@
-
 ### ALIASES ###
 # \x1b[2J   <- clears tty
 # \x1b[1;1H <- goes to (1, 1) (start)
@@ -11,6 +10,10 @@ op completion fish | source
 alias mk='mkdir'
 alias unrar='unrar x'
 
+#cd
+alias cdz='cd'
+alias z='cd'
+
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -18,17 +21,20 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
+#cat
+alias cat='bat'
+
 # vim
 alias vim='nvim'
 alias vi='vim'
 
 # Changing "ls" to "exa"
-# alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias ls='exa  --icons --color=always --group-directories-first'
-alias la='exa -a --icons --color=always --group-directories-first' # all files and dirs(including hidden)
-alias ll='exa -hagl --icons --git --color=always --group-directories-first' # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a --icons | grep -E "^\."' # show only hidden files
+# alias ls='eza -al --color=always --group-directories-first' # my preferred listing
+alias ls='lsd  --color=always --group-directories-first'
+alias la='lsd --all --icons --color=always --group-directories-first' # all files and dirs(including hidden)
+alias ll='lsd  -g --all --header --long  --git --color=always --group-directories-first' # long format
+alias lt='lsd --tree --color=always --group-directories-first' # tree listing
+alias l.='lsd --all | grep -E "^\."' # show only hidden files
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'

@@ -1,5 +1,4 @@
 ### EXPORT ###
-
 set fish_greeting # Supresses fish's intro message
 # set TERM xterm-256color # Sets the terminal type
 set -g -x TERM xterm-kitty
@@ -32,10 +31,10 @@ set -g -x RANGER_LOAD_DEFAULT_RC = FALSE
 set -g -x RANGER_LOAD_DEFAULT_RC = FALSE
 
 # ADD NPM PATH #
-set -x PATH /home/night/.npm-global/bin $PATH
+set -g -x PATH /home/night/.npm-global/bin $PATH
 
 # ADD CARGO PATH #
-set -x PATH /home/night/.cargo/bin $PATH
+set -g -x PATH /home/night/.cargo/bin $PATH
 
 # ADD PYENV PATH #
 set -g -x PYENV_ROOT $HOME/.pyenv
@@ -67,21 +66,17 @@ set -g -x GLFW_IM_MODULE ibus
 
 # Wayland
 # GTK后端为 wayland和x11,优先wayland
-set -g -x GDK_BACKEND "wayhland,x11"
+# set -g -x GDK_BACKEND "wayhland,x11"
 # 解决QT程序缩放问题
-set -g -x QT_AUTO_SCREEN_SCALE_FACTOR 1
+# set -g -x QT_AUTO_SCREEN_SCALE_FACTOR 1
 # QT使用wayland和gtk
-set -g -x QT_QPA_PLATFORM "wayland;xcb"
-set -g -x QT_WAYLAND_DISABLE_WINDOWDECORATION 1
+# set -g -x QT_QPA_PLATFORM "wayland;xcb"
+# set -g -x QT_WAYLAND_DISABLE_WINDOWDECORATION 1
 # 使用qt5ct软件配置QT程序外观
-set -g -x QT_QPA_PLATFORMTHEME qt5ct
+# set -g -x QT_QPA_PLATFORMTHEME qt5ct
 # 一些游戏使用wayland
-set -g -x QT_QPA_PLATFORMTHEME qt5ct
+# set -g -x QT_QPA_PLATFORMTHEME qt5ct
 # 解决java程序黑屏问题
-set -g -x _JAVA_AWT_WM_NONREPARENTING 1
+# set -g -x _JAVA_AWT_WM_NONREPARENTING 1
 
-
-
-# dispay
-# set -g -x DISPLAY :0
-### END ###
+set -x _ZO_ECHO 1

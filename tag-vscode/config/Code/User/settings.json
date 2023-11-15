@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Tokyo-Night",
+    "workbench.colorTheme": "Gruvbox-Retro",
   "window.menuBarVisibility": "toggle",
   "editor.fontSize": 18,
   "editor.scrollbar.vertical": "hidden",
@@ -592,4 +592,5 @@
   "editor.formatOnSave": true,
   "C_Cpp.intelliSenseEngine": "disabled",
   "code-runner.runInTerminal": true,
+  "RainbowBrackets.depreciation-notice": false,
 }

@@ -70,7 +70,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting z copybuffer zsh-history-substring-search you-should-use)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -128,10 +128,6 @@ function in {
     fi
 }
 
-alias  l='eza -l  --icons' # long list
-alias ls='eza -1  --icons' # short list
-alias ll='eza -la --icons' # long list all
-alias ld='eza -lD --icons' # long list dirs
 alias un='sudo pacman -Rns' # uninstall package
 alias up='sudo pacman -Syu' # update system/package/aur
 alias pl='pacman -Qs' # list installed package
@@ -140,6 +136,94 @@ alias pc='sudo pacman -Sc' # remove unused cache
 alias po='pacman -Qtdq | sudo pacman -Rns -' # remove unused packages, also try > pacman -Qqd | pacman -Rsu --print -
 alias vc='code' # gui code editor
 
+# undefind
+alias mk='mkdir'
+alias unrar='unrar x'
+
+# navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+#cat
+alias cat='bat'
+
+# vim
+alias vim='nvim'
+alias vi='vim'
+
+# Changing "ls" to "lsd"
+alias  l='lsd --long' # long list
+alias ls='lsd -1' # short list
+alias la='lsd --all --icons --color=always --group-directories-first' # all files and dirs(including hidden)
+alias ld='lsd -lD' # long list dirs
+alias ll='lsd -g --all --header --long  --git' # long format
+alias lt='lsd --tree' # tree listing
+alias l.='lsd --all | grep -E "^\."' # show only hidden files
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+# ps
+alias psa="ps auxf"
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias psmem='ps auxf | sort -nr -k 4'
+alias pscpu='ps auxf | sort -nr -k 3'
+
+# git
+alias lg='lazygit'
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias tag='git tag'
+alias newtag='git tag -a'
+
+# get error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
+# switch between shells
+# I do not recommend switching default SHELL from bash.
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+
+#docker
+alias dk='docker'
+alias dki='docker images'
+alias dkc='docker container ls'
+alias dkr='docker run'
+alias dke='docker exec -it'
+alias dkp='docker ps'
+alias dkpa='docker ps -a'
+alias dkrmi='docker rmi'
+alias dkrm='docker rm'
+alias dkb='docker build'
+alias dkt='docker tag'
+alias dkl='docker logs'
+alias dklf='docker logs -f'
+
+# clear
+alias cl='clear'
+
+# ranger
+alias ra='ranger'
+
+eval "$(zoxide init zsh --cmd cd)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -151,3 +235,15 @@ pokemon-colorscripts --no-title -r 1,3,6
 
 #Display random gifs
 #kitten icat --align left $(find $HOME/.config/neofetch/gifs/ -name "*.gif" | sort -R | head -1)
+
+#history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey '^p' history-substring-search-up
+bindkey '^n' history-substring-search-down
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=(bg=none,fg=magenta,bold)
+
+#you-should-use
+export YSU_MESSAGE_POSITION="after"
