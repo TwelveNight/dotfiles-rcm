@@ -306,4 +306,4 @@ if status --is-interactive
 end
 
 thefuck --alias | source
-bind \cs __ethp_commandline_toggle_sudo
+# bind \cs '__ethp_commandline_toggle_sudo.fish'
