@@ -165,9 +165,11 @@ nnoremap gp :action FindInPath<CR>
 nnoremap gh :action Back<CR>
 nnoremap gl :action Forward<CR>
 
+nnoremap <leader>f :action GotoFile<CR> 
+nnoremap <leader>m :action GotoSymbol<CR>
+nnoremap <leader>w :action FindInPath<CR>
 
 " action
-map <c-r> :action RecentFiles<CR>
 map <leader>r :action RecentFiles<CR>
 nnoremap <leader>g :action ActivateCommitToolWindow<CR>
 nnoremap <leader>o :action ActivateStructureToolWindow<CR>
@@ -209,3 +211,5 @@ map F <Plug>(easymotion-s)
 map f <Plug>(easymotion-f)
 
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+nnoremap <leader>k :action ShowHoverInfo<CR>
+nnoremap K :action ShowHoverInfo<CR>
