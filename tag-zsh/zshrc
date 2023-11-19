@@ -1,3 +1,4 @@
+ZSH_DISABLE_COMPFIX=true
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -25,7 +26,6 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/sudo"
 plug "MichaelAquilina/zsh-you-should-use"
-# plug "$HOME/.config/zsh/plugins/z/z.plugin.zsh"
 plug "agkozak/zsh-z"
 plug "$HOME/.config/zsh/plugins/fzf/fzf.plugin.zsh"
 plug "zap-zsh/fzf"
@@ -33,7 +33,6 @@ plug "Aloxaf/fzf-tab"
 plug "Freed-Wu/fzf-tab-source"
 export VI_MODE_ESC_INSERT="jk" && plug "zap-zsh/vim"
 # plug "joshskidmore/zsh-fzf-history-search"
-# instead of fzf-tab
 plug "wintermi/zsh-golang"
 # plug "chivalryq/git-alias"
 
@@ -50,3 +49,6 @@ compinit
 
 export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 alias gom="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+
+#fuck
+eval $(thefuck --alias)
