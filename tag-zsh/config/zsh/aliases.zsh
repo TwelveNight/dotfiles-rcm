@@ -122,6 +122,15 @@ alias cl='clear'
 # ranger
 alias ra='ranger'
 
+#zsh
+alias zshrc='nvim ~/.zshrc'
+alias zsha='nvim ~/.config/zsh/aliases.zsh'
+alias zshe='nvim ~/.config/zsh/exports.zsh'
+alias zshb='nvim ~/.config/zsh/bindkey.zsh'
+
+#hyprland
+alias hypr='nvim ~/.config/hypr/userprefs.conf'
+
 eval "$(zoxide init zsh --cmd cd)"
 
 
