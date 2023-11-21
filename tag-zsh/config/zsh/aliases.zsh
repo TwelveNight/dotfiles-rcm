@@ -122,6 +122,9 @@ alias cl='clear'
 # ranger
 alias ra='ranger'
 
+#app
+alias idea='intellij-idea-ultimate-edition'
+
 #zsh
 alias zshrc='nvim ~/.zshrc'
 alias zsha='nvim ~/.config/zsh/aliases.zsh'
