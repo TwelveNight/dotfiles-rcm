@@ -170,7 +170,7 @@ nnoremap <leader>m :action GotoSymbol<CR>
 nnoremap <leader>w :action FindInPath<CR>
 
 " action
-map <leader>r :action RecentFiles<CR>
+map <leader>R :action RecentFiles<CR>
 nnoremap <leader>g :action ActivateCommitToolWindow<CR>
 nnoremap <leader>o :action ActivateStructureToolWindow<CR>
 nnoremap <leader>cr :action Run<CR>
