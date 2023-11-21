@@ -9,5 +9,5 @@ git:
 keybinding:
   universal:
     return: "<c-c>"
-    prevBlock-alt: "<c-k>"
-    nextBlock-alt: "<c-j>"
+    # prevBlock-alt: "<c-j>"
+    # nextBlock-alt: "<c-k>"
