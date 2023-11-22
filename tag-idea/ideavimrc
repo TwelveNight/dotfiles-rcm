@@ -178,6 +178,15 @@ nnoremap <leader>cc :action Stop<CR>
 " Select All
 nnoremap <leader>a :action $SelectAll<CR>
 
+" indent a block
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+vnoremap > >gv
+vnoremap < <gv
+
 " Move line"
 map J :action MoveLineDown<CR>
 map K :action MoveLineUp<CR>

@@ -26,6 +26,12 @@ keymap.set("n", "tn", "<cmd>bnext<cr>", { desc = "Next buffer" })
 keymap.set("n", "E", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 keymap.set("n", "R", "<cmd>bnext<cr>", { desc = "Next buffer" })
 
+-- indent block
+keymap.set("n", "<TAB>", ">>", { desc = "Indent left" })
+keymap.set("n", "<S-TAB>", "<<", { desc = "Indent left" })
+keymap.set("v", "<TAB>", ">gv", { desc = "Indent left" })
+keymap.set("v", "<S-TAB>", "<gv", { desc = "Indent left" })
+
 -- Move Lines
 keymap.set("v", "<S-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 keymap.set("v", "<S-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
