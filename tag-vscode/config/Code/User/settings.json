@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Gruvbox-Retro",
+  "workbench.colorTheme": "Catppuccin-Mocha",
   "window.menuBarVisibility": "toggle",
   "editor.fontSize": 18,
   "editor.scrollbar.vertical": "hidden",
@@ -125,6 +125,22 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "tab"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<s-tab>"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
     {
       "before": [
         "E"
@@ -431,8 +447,40 @@
         "workbench.action.splitEditorDown"
       ]
     },
+    // {
+    //   "before": [
+    //     "K"
+    //   ],
+    //   "commands": [
+    //     "editor.action.moveLinesUpAction"
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "J"
+    //   ],
+    //   "commands": [
+    //     "editor.action.moveLinesDownAction"
+    //   ]
+    // }
   ],
   "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ]
+    },
+    {
+      "before": [
+        "J"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ]
+    },
     {
       // which key
       "before": [
@@ -481,7 +529,23 @@
         "v",
         "y"
       ]
-    }
+    },
+    {
+      "before": [
+        "tab"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<s-tab>"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
   ],
   /* vim settings end */
   "vsicons.dontShowNewVersionMessage": true,
