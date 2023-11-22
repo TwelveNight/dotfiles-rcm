@@ -20,10 +20,15 @@ keymap.set("n", "H", "^", { desc = "end" })
 -- Redo
 keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
 
+-- buffer
 keymap.set("n", "tp", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 keymap.set("n", "tn", "<cmd>bnext<cr>", { desc = "Next buffer" })
 keymap.set("n", "E", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 keymap.set("n", "R", "<cmd>bnext<cr>", { desc = "Next buffer" })
+
+-- Move Lines
+keymap.set("v", "<S-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
+keymap.set("v", "<S-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
 -- sniprun
 keymap.set("n", "<leader>rr", ":%SnipRun<cr>", { noremap = true, silent = true, desc = "sniprun" })

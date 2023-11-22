@@ -177,6 +177,10 @@ nnoremap <leader>cr :action Run<CR>
 nnoremap <leader>cc :action Stop<CR>
 " Select All
 nnoremap <leader>a :action $SelectAll<CR>
+
+" Move line"
+map J :action MoveLineDown<CR>
+map K :action MoveLineUp<CR>
 " New File
 nnoremap <leader>n :action NewFile<CR>
 
