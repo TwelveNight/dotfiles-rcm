@@ -101,7 +101,9 @@
     "<C-v>": true,
     "<C-w>": true,
     "<C-u>": false,
-    "<C-d>": false
+    "<C-d>": false,
+    "<C-n>": false,
+    "<C-p>": true,
   },
   "vim.hlsearch": true,
   "vim.incsearch": true,

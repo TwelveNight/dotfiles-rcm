@@ -295,7 +295,7 @@
 	// fix ctrl d ctrl u in vim
 	// fix <C-d> and <C-u>
 	{
-		"key": "ctrl+d",
+		"key": "alt+d",
 		"command": "cursorMove",
 		"args": {
 			"to": "down",
@@ -304,7 +304,7 @@
 		},
 	},
 	{
-		"key": "ctrl+u",
+		"key": "alt+u",
 		"command": "cursorMove",
 		"args": {
 			"to": "up",
@@ -314,7 +314,7 @@
 	},
 	// -- disable a bunch of keybindings which may have conflicts with above keybindings
 	{
-		"key": "ctrl+p",
+		"key": "alt+p",
 		"command": "workbench.action.togglePanel"
 	},
 	{
@@ -696,5 +696,19 @@
 	{
 		"key": "ctrl+=",
 		"command": "workbench.action.zoomIn"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "editor.action.addSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+u",
+		"command": "editor.action.moveSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "editor.action.moveSelectionToPreviousFindMatch"
 	}
 ]
