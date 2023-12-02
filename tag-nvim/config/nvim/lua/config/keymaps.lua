@@ -14,8 +14,10 @@ keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true, desc = "rig
 keymap.set("i", "<C-e>", "<End>", { noremap = true, silent = true, desc = "end" })
 keymap.set("i", "<C-a>", "<Home>", { noremap = true, silent = true, desc = "home" })
 
-keymap.set("n", "L", "$", { desc = "home" })
 keymap.set("n", "H", "^", { desc = "end" })
+keymap.set("n", "L", "$", { desc = "home" })
+keymap.set("v", "H", "^", { desc = "end" })
+keymap.set("v", "L", "$", { desc = "home" })
 
 -- Redo
 keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
@@ -27,14 +29,14 @@ keymap.set("n", "E", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 keymap.set("n", "R", "<cmd>bnext<cr>", { desc = "Next buffer" })
 
 -- indent block
-keymap.set("n", "<TAB>", ">>", { desc = "Indent left" })
-keymap.set("n", "<S-TAB>", "<<", { desc = "Indent left" })
-keymap.set("v", "<TAB>", ">gv", { desc = "Indent left" })
-keymap.set("v", "<S-TAB>", "<gv", { desc = "Indent left" })
+keymap.set("n", "<TAB>", ">>", { silent = true, desc = "Indent left" })
+keymap.set("n", "<S-TAB>", "<<", { silent = true, desc = "Indent left" })
+keymap.set("v", "<TAB>", ">gv", { silent = true, desc = "Indent left" })
+keymap.set("v", "<S-TAB>", "<gv", { silent = true, desc = "Indent left" })
 
 -- Move Lines
-keymap.set("v", "<S-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
-keymap.set("v", "<S-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+keymap.set("v", "<S-j>", ":m '>+1<cr>gv=gv", { silent = true, desc = "Move down" })
+keymap.set("v", "<S-k>", ":m '<-2<cr>gv=gv", { silent = true, desc = "Move up" })
 
 -- sniprun
 keymap.set("n", "<leader>rr", ":%SnipRun<cr>", { noremap = true, silent = true, desc = "sniprun" })
@@ -56,7 +58,7 @@ keymap.set(
 keymap.set(
   { "n", "v" },
   "T",
-  "<cmd>TranslateW --engines=bing<cr>",
+  "<cmd>TranslateW --engines=google<cr>",
   { noremap = true, silent = true, desc = "Translate Word" }
 )
 
