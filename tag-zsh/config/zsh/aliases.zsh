@@ -34,7 +34,6 @@ alias pl='pacman -Qs' # list installed package
 alias pa='pacman -Ss' # list availabe package
 alias pc='sudo pacman -Sc' # remove unused cache
 alias po='pacman -Qtdq | sudo pacman -Rns -' # remove unused packages, also try > pacman -Qqd | pacman -Rsu --print -
-alias vc='code' # gui code editor
 
 # undefind
 alias mk='mkdir'
@@ -133,6 +132,7 @@ alias zshb='nvim ~/.config/zsh/bindkey.zsh'
 
 #hyprland
 alias hypr='nvim ~/.config/hypr/userprefs.conf'
+alias hyprbug='cat /tmp/hypr/$(ls -t /tmp/hypr/ | head -n 2 | tail -n 1)/hyprland.log'
 
 eval "$(zoxide init zsh --cmd cd)"
 

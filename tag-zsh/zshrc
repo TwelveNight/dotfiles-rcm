@@ -31,7 +31,7 @@ plug "zap-zsh/fzf"
 plug "Aloxaf/fzf-tab"
 plug "Freed-Wu/fzf-tab-source"
 export VI_MODE_ESC_INSERT="jk" && plug "zap-zsh/vim"
-# plug "joshskidmore/zsh-fzf-history-search"
+plug "joshskidmore/zsh-fzf-history-search"
 plug "wintermi/zsh-golang"
 # plug "chivalryq/git-alias"
 
@@ -50,3 +50,4 @@ export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$P
 
 #fuck
 eval $(thefuck --alias)
+eval "$(pyenv virtualenv-init -)"
