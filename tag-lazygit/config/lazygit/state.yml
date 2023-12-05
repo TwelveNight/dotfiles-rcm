@@ -1,10 +1,12 @@
 lastupdatecheck: 1700395427
 recentrepos:
 - /home/night/.dotfiles
+- /home/night/.local/share/nvim/lazy/LuaSnip
+- /home/night/hyprland-demo/hyprdots
 - /home/night/hyprland-demo/dotfiles
+- /home/night/hyprland-demo/dots-hyprland
 - /home/night/ncuhome/work/welcome-guide-2022-be
 - /home/night/lazygit
-- /home/night/hyprland-demo/hyprdots
 - /home/night/code/web_front/todolist
 - /home/night/ncuhome/work/labor/labor-be
 - /home/night/ncuhome/study/blog
@@ -12,7 +14,6 @@ recentrepos:
 - /home/night/.local/share/nvim/lazy/SchemaStore.nvim
 - /home/night/.local/share/nvim/lazy/go.nvim
 - /home/night/schoolcode/DataStructure
-- /home/night/.cache/yay/java21-jetbrains-imfix
 - /home/night/ncuhome/passport
 - /home/night/ncuhome/new/23-HOMEWORK-3
 - /home/night/.local/share/nvim/lazy/markdown-preview.nvim
