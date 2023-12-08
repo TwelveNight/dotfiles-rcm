@@ -13,6 +13,7 @@ return {
       window = {
         mappings = {
           ["l"] = "open",
+          ["o"] = "open",
           ["h"] = "close_node",
         },
       },
