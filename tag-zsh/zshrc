@@ -50,4 +50,3 @@ export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$P
 
 #fuck
 eval $(thefuck --alias)
-eval "$(pyenv virtualenv-init -)"
