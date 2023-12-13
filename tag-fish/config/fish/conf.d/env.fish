@@ -64,19 +64,4 @@ set -g -x SDL_IM_MODULE fcitx5
 set -g -x XMODIFIERS @im=fcitx5
 set -g -x GLFW_IM_MODULE ibus
 
-# Wayland
-# GTK后端为 wayland和x11,优先wayland
-# set -g -x GDK_BACKEND "wayhland,x11"
-# 解决QT程序缩放问题
-# set -g -x QT_AUTO_SCREEN_SCALE_FACTOR 1
-# QT使用wayland和gtk
-# set -g -x QT_QPA_PLATFORM "wayland;xcb"
-# set -g -x QT_WAYLAND_DISABLE_WINDOWDECORATION 1
-# 使用qt5ct软件配置QT程序外观
-# set -g -x QT_QPA_PLATFORMTHEME qt5ct
-# 一些游戏使用wayland
-# set -g -x QT_QPA_PLATFORMTHEME qt5ct
-# 解决java程序黑屏问题
-# set -g -x _JAVA_AWT_WM_NONREPARENTING 1
-
 set -x _ZO_ECHO 1
