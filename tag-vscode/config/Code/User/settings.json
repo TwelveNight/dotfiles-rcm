@@ -660,4 +660,5 @@
   "code-runner.runInTerminal": true,
   "RainbowBrackets.depreciation-notice": false,
   "workbench.iconTheme": "vscode-icons",
+  "terminal.integrated.gpuAcceleration": "on",
 }
