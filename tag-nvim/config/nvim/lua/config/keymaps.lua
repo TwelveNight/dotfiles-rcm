@@ -33,6 +33,8 @@ keymap.set("n", "<TAB>", ">>", { silent = true, desc = "Indent left" })
 keymap.set("n", "<S-TAB>", "<<", { silent = true, desc = "Indent left" })
 keymap.set("v", "<TAB>", ">gv", { silent = true, desc = "Indent left" })
 keymap.set("v", "<S-TAB>", "<gv", { silent = true, desc = "Indent left" })
+-- fix <C-I> mapping
+keymap.set("n", "<C-I>", "<C-I>")
 
 -- Move Lines
 keymap.set("v", "<S-j>", ":m '>+1<cr>gv=gv", { silent = true, desc = "Move down" })
