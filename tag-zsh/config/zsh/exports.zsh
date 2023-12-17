@@ -21,6 +21,9 @@ export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 # add toolbox scripts to path
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 
+# add own scripts to path
+export PATH="$PATH:$HOME/.local/scripts"
+
 # eval pyenv virtualenv to path
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
