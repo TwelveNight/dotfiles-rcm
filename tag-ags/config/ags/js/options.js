@@ -251,7 +251,7 @@ export default {
   },
 
   mpris: {
-    black_list: Option(["Caprine"], {
+    black_list: Option(["Caprine", "Chromium", "Chrome"], {
       category: "Bar",
       title: "List of blacklisted mpris players",
       note: "filters for bus-name, name, identity, entry",
