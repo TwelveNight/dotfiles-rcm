@@ -72,8 +72,8 @@ export default {
   mpris: {
     fallback: "audio-x-generic-symbolic",
     shuffle: {
-      enabled: "󰒟 ",
-      disabled: "󰒟 ",
+      enabled: " 󰒟  ",
+      disabled: " 󰒟  ",
     },
     loop: {
       none: "󰓦 ",

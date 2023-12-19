@@ -18,7 +18,6 @@ const Footer = (player) =>
       }),
       Widget.Box({
         class_name: "controls",
-        // spacing: 15,
         children: [
           mpris.ShuffleButton(player),
           mpris.PreviousButton(player),
