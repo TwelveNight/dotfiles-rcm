@@ -238,7 +238,9 @@ export default {
   },
 
   notifications: {
-    black_list: Option(["Spotify"], { note: "app-name | entry" }),
+    black_list: Option(["Spotify", "Clash"], {
+      note: "app-name | entry",
+    }),
     position: Option(["top"], { note: "anchor" }),
     width: Option(450),
   },
