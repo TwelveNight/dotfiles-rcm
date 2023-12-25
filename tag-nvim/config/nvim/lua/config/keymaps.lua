@@ -57,12 +57,9 @@ keymap.set(
   { noremap = true, silent = true, desc = "Resume Last Telescope Picker" }
 )
 
-keymap.set(
-  { "n", "v" },
-  "T",
-  "<cmd>TranslateW --engines=google<cr>",
-  { noremap = true, silent = true, desc = "Translate Word" }
-)
+-- translate
+keymap.set({ "n" }, "t", "<Plug>TranslateW", { silent = true, desc = "Translate Word" })
+keymap.set({ "v" }, "t", "<Plug>TranslateWV", { silent = true, desc = "Translate Word" })
 
 --debug
 keymap.set("n", "<F9>", function()
