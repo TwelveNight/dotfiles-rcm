@@ -189,6 +189,7 @@ export default {
       category: "exclude",
     }),
     bar: {
+      show_icon: Option(true, { category: "Bar" }),
       width: Option(70, { category: "Bar" }),
       height: Option(14, { category: "Bar" }),
       full: Option(false, { category: "Bar" }),
@@ -223,10 +224,11 @@ export default {
       icon_size: Option(56),
       pinned_apps: Option(
         [
-          "google-chrome",
           "firefox",
+          "google-chrome",
           "kitty",
           "org.gnome.Nautilus",
+          "code",
           "jetbrains-goland",
           "docker-desktop",
           "apifox",
@@ -238,9 +240,7 @@ export default {
   },
 
   notifications: {
-    black_list: Option(["Spotify", "Clash"], {
-      note: "app-name | entry",
-    }),
+    black_list: Option(["Spotify", "Clash"], { note: "app-name | entry" }),
     position: Option(["top"], { note: "anchor" }),
     width: Option(450),
   },

@@ -9,6 +9,7 @@ export default [
     name: "Kitty Dark",
     icon: "󰄛",
     "desktop.wallpaper.img": WP + "kittybl.jpeg",
+    "font.font": "JetBrains Nerd Font Mono Regular",
   }),
   Theme({
     name: "Kitty Light",
@@ -17,11 +18,6 @@ export default [
     ...lightColors,
     "theme.widget.bg": "$accent",
     "theme.widget.opacity": 64,
-  }),
-  Theme({
-    name: "Kitty diy",
-    icon: "󰄛",
-    "font.font": "JetBrainsMono Nerd Font Mono Regular",
   }),
   Theme({
     name: "Leaves",
@@ -65,7 +61,7 @@ export default [
   }),
   Theme({
     name: "Space",
-    icon: "",
+    icon: " ",
     "desktop.wallpaper.img": WP + "space.jpg",
     spacing: 11,
     padding: 10,

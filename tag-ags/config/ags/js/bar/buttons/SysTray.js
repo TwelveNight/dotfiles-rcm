@@ -7,8 +7,8 @@ import Gdk from "gi://Gdk";
 const SysTrayItem = (item) =>
   PanelButton({
     class_name: "tray-item",
-    content: Widget.Icon({ binds: [["icon", item, "icon"]] }),
-    binds: [["tooltipMarkup", item, "tooltip-markup"]],
+    content: Widget.Icon({ icon: item.bind("icon") }),
+    tooltip_markup: item.bind("tooltip_markup"),
     setup: (self) => {
       const id = item.menu?.connect("popped-up", (menu) => {
         self.toggleClassName("active");
@@ -24,6 +24,7 @@ const SysTrayItem = (item) =>
     // @ts-expect-error popup_at_widget missing from types?
     on_primary_click: (_, event) => item.activate(event),
     on_middle_click: (_, event) => item.activate(event),
+
     // @ts-expect-error popup_at_widget missing from types?
     on_secondary_click: (btn) =>
       item.menu?.popup_at_widget(
@@ -35,6 +36,4 @@ const SysTrayItem = (item) =>
   });
 
 export default () =>
-  Widget.Box({
-    binds: [["children", SystemTray, "items", (i) => i.map(SysTrayItem)]],
-  });
+  Widget.Box().bind("children", SystemTray, "items", (i) => i.map(SysTrayItem));
