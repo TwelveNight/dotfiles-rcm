@@ -1,0 +1,40 @@
+{
+  "pyprland": {
+    "plugins": ["scratchpads", "magnify", "shift_monitors", "expose"]
+  },
+  "scratchpads": {
+    "kitty": {
+      "lazy": true,
+      "command": "kitty --class scratchpad",
+      "margin": 50
+    },
+    "cava": {
+      "lazy": true,
+      "command": "kitty --class kitty --title cava cava"
+    },
+    "ranger": {
+      "lazy": true,
+      "command": "kitty --class scratchpad ranger",
+      "margin": 50
+    },
+    "pavucontrol": {
+      "lazy": true,
+      "command": "pavucontrol",
+      "margin": 50,
+      "unfocus": "hide",
+      "animation": "fromTop"
+    },
+    "google-chrome-stable": {
+      "lazy": true,
+      "command": "google-chrome-stable --gtk-version=4"
+    },
+    "firefox": {
+      "lazy": true,
+      "command": "firefox"
+    },
+    "nautilus": {
+      "lazy": true,
+      "command": "nautilus"
+    }
+  }
+}
