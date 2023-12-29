@@ -226,9 +226,10 @@ export default {
         [
           "firefox",
           "google-chrome",
+          "chromium",
           "kitty",
           "org.gnome.Nautilus",
-          "code",
+          "codium",
           "jetbrains-goland",
           "docker-desktop",
           "apifox",
