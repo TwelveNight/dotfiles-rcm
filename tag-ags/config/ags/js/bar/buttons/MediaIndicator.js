@@ -13,7 +13,7 @@ export const getPlayer = (name = options.mpris.preferred.value) =>
  * @param {import('types/service/mpris').MprisPlayer} o.player
  * @param {import('../../misc/HoverRevealer').HoverRevealProps['direction']=} o.direction
  */
-const Indicator = ({ player, direction = "right" }) =>
+const Indicator = ({ player, direction = "left" }) =>
   HoverRevealer({
     class_name: `media panel-button ${player.name}`,
     direction,
@@ -30,9 +30,7 @@ const Indicator = ({ player, direction = "right" }) =>
         [
           player,
           (label) => {
-            label.label = `${player.track_artists.join(", ")} - ${
-              player.track_title
-            }`;
+            label.label = `${player.track_title}`;
           },
         ],
       ],

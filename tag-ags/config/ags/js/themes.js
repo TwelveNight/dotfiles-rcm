@@ -9,12 +9,15 @@ export default [
     name: "Kitty Dark",
     icon: "󰄛",
     // "desktop.wallpaper.img": WP + "kittybl.jpeg",
-    "font.font": "JetBrains Nerd Font Mono Regular",
+    // "font.size": 12,
+    "font.font": "JetBrainsMono Nerd Font Mono Regular",
   }),
   Theme({
     name: "Kitty Light",
     icon: "󰄛",
-    "desktop.wallpaper.img": WP + "kitty.jpeg",
+    "font.font": "JetBrainsMono Nerd Font Mono Regular",
+    "font.size": 12,
+    // "desktop.wallpaper.img": WP + "kitty.jpeg",
     ...lightColors,
     "theme.widget.bg": "$accent",
     "theme.widget.opacity": 64,
@@ -22,6 +25,7 @@ export default [
   Theme({
     name: "Leaves",
     icon: "󰌪",
+    "font.font": "JetBrainsMono Nerd Font Mono Regular",
     "desktop.wallpaper.img": WP + "leaves.jpg",
     "theme.accent.accent": "$green",
     "theme.accent.gradient": "to right, $accent, darken($accent, 14%)",
@@ -34,6 +38,7 @@ export default [
   Theme({
     name: "Leaves-diy",
     icon: "󰌪",
+    "font.font": "JetBrainsMono Nerd Font Mono Regular",
     "desktop.wallpaper.img": "none",
     "theme.accent.accent": "$green",
     "theme.accent.gradient": "to right, $accent, darken($accent, 14%)",
@@ -45,6 +50,7 @@ export default [
   Theme({
     name: "Ivory",
     icon: "󰟆",
+    "font.font": "JetBrainsMono Nerd Font Mono Regular",
     ...lightColors,
     "desktop.wallpaper.img": WP + "ivory.png",
     "desktop.wallpaper.fg": "$bg_color",
@@ -61,7 +67,8 @@ export default [
   }),
   Theme({
     name: "Space",
-    icon: " ",
+    icon: "",
+    "font.font": "JetBrainsMono Nerd Font Mono Regular",
     "desktop.wallpaper.img": WP + "space.jpg",
     spacing: 11,
     padding: 10,
