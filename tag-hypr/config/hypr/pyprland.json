@@ -8,6 +8,11 @@
       "command": "kitty --class scratchpad",
       "margin": 50
     },
+    "warp-terminal": {
+      "lazy": true,
+      "command": "warp-terminal",
+      "margin": 50
+    },
     "cava": {
       "lazy": true,
       "command": "kitty --class kitty --title cava cava"
@@ -26,11 +31,19 @@
     },
     "google-chrome-stable": {
       "lazy": true,
-      "command": "google-chrome-stable --gtk-version=4"
+      "command": "google-chrome-stable"
+    },
+    "chromium": {
+      "lazy": true,
+      "command": "chromium"
     },
     "firefox": {
       "lazy": true,
       "command": "firefox"
+    },
+    "firefox-nightly": {
+      "lazy": true,
+      "command": "firefox-nightly"
     },
     "nautilus": {
       "lazy": true,
