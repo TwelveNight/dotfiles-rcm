@@ -661,4 +661,5 @@
   "RainbowBrackets.depreciation-notice": false,
   "workbench.iconTheme": "vscode-icons",
   "terminal.integrated.gpuAcceleration": "on",
+  "security.promptForLocalFileProtocolHandling": false,
 }
