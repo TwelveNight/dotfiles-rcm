@@ -48,6 +48,10 @@
     "nautilus": {
       "lazy": true,
       "command": "nautilus"
+    },
+    "thunar": {
+      "lazy": true,
+      "command": "thunar"
     }
   }
 }
