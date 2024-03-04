@@ -15,9 +15,6 @@ export GOPATH="$HOME/go"
 # export GOROOT="$HOME/.go"
 export PATH="$PATH:$GOPATH/bin"
 
-# add bob nvim to path
-export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
-
 # add cargo to path
 export PATH="$PATH:$HOME/.cargo/bin"
 

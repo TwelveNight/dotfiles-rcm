@@ -51,6 +51,10 @@ alias cat='bat'
 
 # vim
 alias vim='nvim'
+alias vi='neovide'
+alias v='vim'
+alias lv='neovide-lunarvim'
+
 
 # Changing "ls" to "lsd"
 alias ls='lsd --all' # short list
