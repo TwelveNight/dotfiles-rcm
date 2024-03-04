@@ -49,9 +49,6 @@ set -g -x PATH $HOME/go/bin $PATH
 # ADD SSH_AUTH_SOCK
 set -g -x SSH_AUTH_SOCK $HOME/.1password/agent.sock
 
-# ADD aliyunpan PATH #
-# set -g -x ALIYUNPAN_CONFIG_DIR $HOME/aliyunpan
-
 
 # ADD db pssword
 set -g -x PASSPORT_PASSWORD GostdGVkX1
