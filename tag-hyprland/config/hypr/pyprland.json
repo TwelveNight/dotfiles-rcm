@@ -37,6 +37,10 @@
       "lazy": true,
       "command": "chromium"
     },
+    "thorium": {
+      "lazy": true,
+      "command": "thorium-browser"
+    },
     "firefox": {
       "lazy": true,
       "command": "firefox"
