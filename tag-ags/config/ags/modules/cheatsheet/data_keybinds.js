@@ -95,7 +95,7 @@ export const keybindList = [
         },
 
         {
-          keys: ["" + "Q", "OR", "Ctrl", "Shift" + "Q"],
+          keys: ["", "+", "Q", "OR", "Ctrl", "Shift", "+", "Q"],
           action: "Exit a window",
         },
         { keys: ["rightCtrl"], action: "Dismiss/close sidebar" },
@@ -119,8 +119,12 @@ export const keybindList = [
       binds: [
         { keys: ["PrtSc"], action: "Screenshot  >>  clipboard" },
         {
-          keys: ["Ctrl", "Alt", "+", "A"],
+          keys: ["Ctrl", "Alt", "+", "A/Lmb"],
           action: "Screen snip  >>  clipboard",
+        },
+        {
+          keys: ["Ctrl", "Alt", "+", "P/Mmb"],
+          action: "Pin a screenshot",
         },
         {
           keys: ["Alt", "+", "X"],
