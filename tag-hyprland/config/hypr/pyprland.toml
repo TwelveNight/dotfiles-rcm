@@ -1,0 +1,50 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+  "magnify",
+  "expose",
+  "shift_monitors",
+  "toggle_special",
+]
+
+[scratchpads.term]
+lazy = true
+animation = "fromTop"
+command = "kitty --class kitty-scratchpad"
+size = "50% 60%"
+
+[scratchpads.warp]
+lazy = true
+animation = "fromTop"
+command = "warp-terminal"
+size = "50% 60%"
+
+[scratchpads.volume]
+animation = "fromtop"
+command = "pavucontrol"
+class = "pavucontrol"
+lazy = true
+size = "70% 40%"
+unfocus = "hide"
+
+[scratchpads.thunar]
+lazy = true
+animation = "fromTop"
+command = "thunar"
+
+[scratchpads.nautilus]
+lazy = true
+animation = "fromTop"
+command = "nautilus"
+
+
+[scratchpads.firefox]
+lazy = true
+command = "firefox"
+position = "0% 0%"
+
+
+[scratchpads.thorium]
+lazy = true
+command = "thorium-browser"
+position = "0% 0%"
