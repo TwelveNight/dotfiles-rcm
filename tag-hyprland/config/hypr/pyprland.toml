@@ -9,15 +9,13 @@ plugins = [
 
 [scratchpads.term]
 lazy = true
-animation = "fromTop"
 command = "kitty --class kitty-scratchpad"
-size = "50% 60%"
 
 [scratchpads.warp]
 lazy = true
-animation = "fromTop"
+position = "5% 5%"
 command = "warp-terminal"
-size = "50% 60%"
+size = "90% 90%"
 
 [scratchpads.volume]
 animation = "fromtop"
@@ -29,22 +27,18 @@ unfocus = "hide"
 
 [scratchpads.thunar]
 lazy = true
-animation = "fromTop"
 command = "thunar"
 
 [scratchpads.nautilus]
 lazy = true
-animation = "fromTop"
 command = "nautilus"
 
 
 [scratchpads.firefox]
 lazy = true
 command = "firefox"
-position = "0% 0%"
 
 
 [scratchpads.thorium]
 lazy = true
 command = "thorium-browser"
-position = "0% 0%"
