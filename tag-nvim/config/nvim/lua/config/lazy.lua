@@ -12,35 +12,6 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
-    -- import any extras modules here
-    -- { import = "lazyvim.plugins.extras.editor.leap" }, -- best jump with f/t
-
-    -- { import = "lazyvim.plugins.extras.editor.mini-files" }, -- floating file explorer
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" }, -- jump animate
-    -- { import = "lazyvim.plugins.extras.util.mini-hipatterns" }, --highlight patterns in text
-
-    -- { import = "lazyvim.plugins.extras.util.project" }, --find project
-    -- { import = "lazyvim.plugins.extras.test.core" }, -- test
-    -- { import = "lazyvim.plugins.extras.coding.copilot" }, --AI
-
-    -- { import = "lazyvim.plugins.extras.vscode" },
-
-    -- { import = "lazyvim.plugins.extras.dap.core" }, -- debug
-    -- { import = "lazyvim.plugins.extras.dap.nlua" },
-
-    -- { import = "lazyvim.plugins.extras.formatting.prettier" }, -- js
-    -- { import = "lazyvim.plugins.extras.linting.eslint" },
-    -- { import = "lazyvim.plugins.extras.lang.tailwind" }, -- css
-    -- { import = "lazyvim.plugins.extras.lang.typescript" }, -- ts
-    -- { import = "lazyvim.plugins.extras.lang.json" },
-    -- { import = "lazyvim.plugins.extras.lang.go" },
-    -- { import = "lazyvim.plugins.extras.lang.python" },
-    -- { import = "lazyvim.plugins.extras.lang.clangd" },
-    -- { import = "lazyvim.plugins.extras.lang.docker" },
-
-    --
-    -- { import = "lazyvim.plugins.extras.ui.edgy" -
-
     -- import/override with your plugins
     { import = "plugins" },
     { import = "plugins/scheme" },
