@@ -123,7 +123,7 @@ export const keybindList = [
           action: "Screen snip  >>  clipboard",
         },
         {
-          keys: ["Ctrl", "Alt", "+", "P/Mmb"],
+          keys: ["Ctrl", "Alt", "+", "I/Mmb"],
           action: "Pin a screenshot",
         },
         {
