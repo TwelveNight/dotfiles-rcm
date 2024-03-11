@@ -28,6 +28,9 @@ export PATH="$PATH:$HOME/.local/scripts"
 # disable webkit dmabuf renderer
 export WEBKIT_DISABLE_DMABUF_RENDERER=1
 
+# tmux
+export TMUX_CONF="$HOME/.config/tmux/tmux.conf"
+
 # eval pyenv virtualenv to path
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
