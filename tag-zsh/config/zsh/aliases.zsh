@@ -52,7 +52,7 @@ alias cat='bat'
 # vim
 alias vim='nvim'
 alias vi='neovide'
-alias v='vim'
+alias v='lvim'
 alias lv='neovide-lunarvim'
 
 
@@ -126,15 +126,22 @@ alias cl='clear'
 alias ra='ranger'
 
 
-#zsh
+# zsh
 alias zshrc='nvim ~/.zshrc'
 alias zsha='nvim ~/.config/zsh/aliases.zsh'
 alias zshe='nvim ~/.config/zsh/exports.zsh'
 alias zshb='nvim ~/.config/zsh/bindkey.zsh'
 
-#hyprland
+# hyprland
 alias hypr='nvim ~/.config/hypr/userprefs.conf'
 alias hyprbug='cat /tmp/hypr/$(ls -t /tmp/hypr/ | head -n 2 | tail -n 1)/hyprland.log'
+
+# lexido
+alias ido="lexido"
+
+# tmux
+alias t='tmux'
+alias ta='tmux a'
 
 eval "$(zoxide init zsh --cmd cd)"
 
