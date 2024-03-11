@@ -162,16 +162,3 @@ class extracthere(Command):
 
         obj.signal_bind("after", refresh)
         self.fm.loader.add(obj)
-
-
-class dragon(Command):
-    def execute(self):
-        th = Thread(target=self.dragondaemon, daemon=True)
-        th.start()
-        th.join()
-
-    def dragondaemon(self):
-        arguments = "kitty --class dragon-term -e dragon-daemon {}".format(
-            " ".join(self.args[1:])
-        )
-        self.fm.execute_command(arguments)
