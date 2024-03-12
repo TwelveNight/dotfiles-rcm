@@ -9,13 +9,12 @@ plugins = [
 
 [scratchpads.term]
 lazy = true
-command = "kitty --class kitty-scratchpad"
+command = "kitty ~/.config/hypr/scripts/tmux-scrachpad.sh"
 
+# FIXME: this is not working
 [scratchpads.warp]
 lazy = true
-position = "5% 5%"
 command = "warp-terminal"
-size = "90% 90%"
 
 [scratchpads.volume]
 animation = "fromtop"
@@ -39,6 +38,7 @@ lazy = true
 command = "firefox"
 
 
+# FIXME: this is not working
 [scratchpads.thorium]
 lazy = true
 command = "thorium-browser"
