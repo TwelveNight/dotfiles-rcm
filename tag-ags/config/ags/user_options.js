@@ -31,14 +31,24 @@ let userConfigOptions = {
     wsNumMarginScale: 0.07,
   },
   sidebar: {
-    imageColumns: 3,
+    imageColumns: 2,
   },
   search: {
     engineBaseUrl: "https://www.google.com/search?q=",
     excludedSites: ["quora.com"],
   },
+  time: {
+    // See https://docs.gtk.org/glib/method.DateTime.format.html
+    // Here's the 12h format: "%I:%M%P"
+    // For seconds, add "%S" and set interval to 1000
+    format: "%H:%M",
+    interval: 5000,
+    dateFormatLong: "%A, %d/%m", // On bar
+    dateInterval: 5000,
+    dateFormat: "%d/%m", // On notif time
+  },
   weather: {
-    city: "shanghai",
+    city: "",
   },
   workspaces: {
     shown: 10,
