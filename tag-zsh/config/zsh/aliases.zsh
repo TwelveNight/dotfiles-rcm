@@ -48,6 +48,7 @@ alias .5='cd ../../../../..'
 
 #cat
 alias cat='bat'
+alias ca='cat'
 
 # vim
 alias vim='nvim'

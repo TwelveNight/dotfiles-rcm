@@ -17,3 +17,9 @@ bindkey -M viins '^S' sudo-command-line
 # vim
 bindkey -M vicmd 'H' beginning-of-line
 bindkey -M vicmd 'L' end-of-line
+
+function clear-screen () {
+  zle clear-screen
+}
+
+bindkey '^O' clear-screen
