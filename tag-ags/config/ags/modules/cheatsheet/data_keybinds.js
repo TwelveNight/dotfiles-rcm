@@ -56,7 +56,8 @@ export const keybindList = [
         { keys: ["", "+", "'"], action: "Split ratio +" },
         { keys: ["", "+", "hjkl"], action: "Move window" },
         { keys: ["", "Shift", "+", "hjkl"], action: "Resize window" },
-        { keys: ["", "+", "O"], action: "Fullscreen" },
+        { keys: ["", "+", "O"], action: "Fullscreen 1" },
+        { keys: ["", "Alt", "+", "O"], action: "Fullscreen 0" },
         { keys: ["", "Alt", "+", "F"], action: "Fake fullscreen" },
       ],
       appeartick: 1,
@@ -98,10 +99,14 @@ export const keybindList = [
           keys: ["", "+", "Q", "OR", "Ctrl", "Shift", "+", "Q"],
           action: "Exit a window",
         },
-        { keys: ["rightCtrl"], action: "Dismiss/close sidebar" },
+        { keys: ["Esc"], action: "Dismiss/close sidebar" },
 
         {
           keys: ["Ctrl", "", "+", "T"],
+          action: "Change wallpaper+colorscheme",
+        },
+        {
+          keys: ["", "Shift", "+", "W"],
           action: "Change wallpaper+colorscheme",
         },
 
@@ -127,8 +132,12 @@ export const keybindList = [
           action: "Pin a screenshot",
         },
         {
-          keys: ["Alt", "+", "X"],
+          keys: ["CTRL", "Alt", "+", "X"],
           action: "Image to text (pot)",
+        },
+        {
+          keys: ["CTRL", "Alt", "+", "C"],
+          action: "Translate image (pot)",
         },
         { keys: ["", "Shift", "+", "C"], action: "Color picker" },
         { keys: ["", "Alt", "+", "R"], action: "Record region" },
@@ -169,7 +178,7 @@ export const keybindList = [
           keys: ["Ctrl", "Shift", "+", "S"],
           action: "Launch browser: Thorium",
         },
-        { keys: ["", "+", "C"], action: "Launch editor: vscodime" },
+        { keys: ["", "+", "C"], action: "Launch editor: vscode" },
         { keys: ["", "+", "X"], action: "Launch editor: GNOME Text Editor" },
         {
           keys: ["Ctrl", "Alt", "+", "I"],
