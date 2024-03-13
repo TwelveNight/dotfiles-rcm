@@ -29,12 +29,13 @@ keymap.set("n", "E", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 keymap.set("n", "R", "<cmd>bnext<cr>", { desc = "Next buffer" })
 
 -- indent block
-keymap.set("n", "<TAB>", ">>", { silent = true, desc = "Indent left" })
+-- keymap.set("n", "<TAB>", ">>", { silent = true, desc = "Indent left" })
 keymap.set("n", "<S-TAB>", "<<", { silent = true, desc = "Indent left" })
 keymap.set("v", "<TAB>", ">gv", { silent = true, desc = "Indent left" })
 keymap.set("v", "<S-TAB>", "<gv", { silent = true, desc = "Indent left" })
 -- fix <C-I> mapping
 keymap.set("n", "<C-I>", "<C-I>")
+keymap.set("n", "<TAB>", "<C-I>")
 
 -- Move Lines
 keymap.set("v", "<S-j>", ":m '>+1<cr>gv=gv", { silent = true, desc = "Move down" })
