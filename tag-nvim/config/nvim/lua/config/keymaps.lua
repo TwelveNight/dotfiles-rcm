@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
 -- local noremap = true, silent = true = { noremap = true, silent = true }
 -- back
 keymap.set("i", "jk", "<Esc>")
@@ -14,10 +15,15 @@ keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true, desc = "rig
 keymap.set("i", "<C-e>", "<End>", { noremap = true, silent = true, desc = "end" })
 keymap.set("i", "<C-a>", "<Home>", { noremap = true, silent = true, desc = "home" })
 
+-- move line left or right
 keymap.set("n", "H", "^", { desc = "end" })
 keymap.set("n", "L", "$", { desc = "home" })
 keymap.set("v", "H", "^", { desc = "end" })
 keymap.set("v", "L", "$", { desc = "home" })
+
+-- Split window
+keymap.set("n", "ss", ":split<Return>", opts)
+keymap.set("n", "sv", ":vsplit<Return>", opts)
 
 -- Redo
 keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
@@ -36,6 +42,7 @@ keymap.set("v", "<S-TAB>", "<gv", { silent = true, desc = "Indent left" })
 -- fix <C-I> mapping
 keymap.set("n", "<C-I>", "<C-I>")
 keymap.set("n", "<TAB>", "<C-I>")
+keymap.set("n", "<C-m>", "<C-i>", opts)
 
 -- Move Lines
 keymap.set("v", "<S-j>", ":m '>+1<cr>gv=gv", { silent = true, desc = "Move down" })

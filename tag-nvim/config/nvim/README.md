@@ -1,3 +1,0 @@
-# 💤  My own lazyvim
-
-
