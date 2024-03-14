@@ -17,6 +17,10 @@ return {
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         ["<C-t>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ["<M-CR>"] = function(fallback)
+          cmp.abort()
+          fallback()
+        end,
       })
       opts.window = {
         completion = cmp.config.window.bordered(win_opt),
