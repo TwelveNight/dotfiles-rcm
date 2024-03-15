@@ -41,7 +41,7 @@ keymap.set("v", "<TAB>", ">gv", { silent = true, desc = "Indent left" })
 keymap.set("v", "<S-TAB>", "<gv", { silent = true, desc = "Indent left" })
 -- fix <C-I> mapping
 keymap.set("n", "<C-I>", "<C-I>")
-keymap.set("n", "<TAB>", "<C-I>")
+-- keymap.set("n", "<TAB>", "<C-I>")
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
 -- Move Lines
