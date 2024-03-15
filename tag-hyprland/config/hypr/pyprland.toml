@@ -17,7 +17,8 @@ lazy = true
 command = "warp-terminal"
 
 [scratchpads.volume]
-animation = "fromtop" command = "pavucontrol"
+animation = "fromtop"
+command = "pavucontrol"
 class = "pavucontrol"
 lazy = true
 size = "70% 40%"
@@ -41,9 +42,13 @@ command = "firefox"
 lazy = true
 command = "firefox-nightly"
 
-
-# FIXME: this is not working
 [scratchpads.thorium]
 lazy = true
 command = "thorium-browser"
+
+
+[scratchpads.edge]
+lazy = true
+command = "microsoft-edge-stable"
+
 
