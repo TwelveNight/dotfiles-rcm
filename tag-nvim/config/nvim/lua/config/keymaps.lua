@@ -7,6 +7,10 @@ local opts = { noremap = true, silent = true }
 -- back
 keymap.set("i", "jk", "<Esc>")
 
+-- quit
+keymap.set("n", "q", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "quit" })
+keymap.set("n", "Q", "<cmd>:qa!<cr>", { noremap = true, silent = true, desc = "quit" })
+
 -- move
 keymap.set("i", "<C-j>", "<Down>", { noremap = true, silent = true, desc = "down" })
 keymap.set("i", "<C-p>", "<Up>", { noremap = true, silent = true, desc = "up" })
