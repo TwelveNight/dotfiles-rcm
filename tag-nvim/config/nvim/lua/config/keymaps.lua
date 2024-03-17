@@ -53,8 +53,8 @@ keymap.set("v", "<S-j>", ":m '>+1<cr>gv=gv", { silent = true, desc = "Move down"
 keymap.set("v", "<S-k>", ":m '<-2<cr>gv=gv", { silent = true, desc = "Move up" })
 
 -- sniprun
-keymap.set("n", "<leader>rr", ":%SnipRun<cr>", { noremap = true, silent = true, desc = "sniprun" })
-keymap.set("v", "<leader>rr", ":%SnipRun<cr>", { noremap = true, silent = true, desc = "sniprun" })
+keymap.set("n", "<leader>rs", ":%SnipRun<cr>", { noremap = true, silent = true, desc = "sniprun" })
+keymap.set("v", "<leader>rs", ":%SnipRun<cr>", { noremap = true, silent = true, desc = "sniprun" })
 keymap.set("n", "<leader>rc", "<cmd>SnipClose<cr>", { noremap = true, silent = true, desc = "snipclose" })
 keymap.set("v", "<leader>rc", ":<cmd>SnipClose<cr>", { noremap = true, silent = true, desc = "snipclose" })
 
