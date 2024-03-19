@@ -1,0 +1,335 @@
+No CAP_SYS_NICE, falling back to regular-priority compute and threads.
+Performance will be affected.
+ATTENTION: default value of option vk_khr_present_wait overridden by environment.
+vulkan: physical device 10de:2560 compute queue doesn't support presenting on our surface, using graphics queue
+vulkan: selecting physical device 'NVIDIA GeForce RTX 3060 Laptop GPU': queue family 0 (general queue family 0)
+vulkan: physical device supports DRM format modifiers
+wlserver: [backend/headless/backend.c:67] Creating headless backend
+vulkan: vkGetPhysicalDeviceFormatProperties2 returned zero modifiers for DRM format 0x38344241 (VkResult: 0)
+vulkan: vkGetPhysicalDeviceFormatProperties2 returned zero modifiers for DRM format 0x38344258 (VkResult: 0)
+vulkan: supported DRM formats for sampling usage:
+vulkan:   AR24 (0x34325241)
+vulkan:   XR24 (0x34325258)
+vulkan:   AB24 (0x34324241)
+vulkan:   XB24 (0x34324258)
+vulkan:   RG16 (0x36314752)
+vulkan:   NV12 (0x3231564E)
+vulkan:   AB4H (0x48344241)
+vulkan:   XB4H (0x48344258)
+vulkan:   AB30 (0x30334241)
+vulkan:   XB30 (0x30334258)
+vulkan:   AR30 (0x30335241)
+vulkan:   XR30 (0x30335258)
+vulkan: Creating Gamescope nested swapchain with format 64 and colorspace 0
+wlserver: Running compositor on wayland display 'gamescope-0'
+wlserver: [backend/headless/backend.c:17] Starting headless backend
+wlserver: [xwayland/sockets.c:63] Failed to bind socket @/tmp/.X11-unix/X0: Address already in use
+wlserver: [util/env.c:9] Loading WLR_NO_HARDWARE_CURSORS option: 1
+wlserver: [types/output/output.c:435] WLR_NO_HARDWARE_CURSORS set, forcing software cursors
+wlserver: [xwayland/server.c:108] Starting Xwayland on :2
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Could not resolve keysym XF86CameraAccessEnable
+> Warning:          Could not resolve keysym XF86CameraAccessDisable
+> Warning:          Could not resolve keysym XF86CameraAccessToggle
+> Warning:          Could not resolve keysym XF86NextElement
+> Warning:          Could not resolve keysym XF86PreviousElement
+> Warning:          Could not resolve keysym XF86AutopilotEngageToggle
+> Warning:          Could not resolve keysym XF86MarkWaypoint
+> Warning:          Could not resolve keysym XF86Sos
+> Warning:          Could not resolve keysym XF86NavChart
+> Warning:          Could not resolve keysym XF86FishingChart
+> Warning:          Could not resolve keysym XF86SingleRangeRadar
+> Warning:          Could not resolve keysym XF86DualRangeRadar
+> Warning:          Could not resolve keysym XF86RadarOverlay
+> Warning:          Could not resolve keysym XF86TraditionalSonar
+> Warning:          Could not resolve keysym XF86ClearvuSonar
+> Warning:          Could not resolve keysym XF86SidevuSonar
+> Warning:          Could not resolve keysym XF86NavInfo
+Errors from xkbcomp are not fatal to the X server
+wlserver: [types/wlr_compositor.c:692] New wlr_surface 0x5f97e7f87030 (res 0x5f97e7f60f20)
+wlserver: [xwayland/server.c:273] Xserver is ready
+pipewire: stream state changed: connecting
+pipewire: stream state changed: paused
+pipewire: stream available on node ID: 61
+vblank: Using timerfd.
+vulkan: Creating Gamescope nested swapchain with format 64 and colorspace 0
+pipewire: renegotiating stream params (size: 1280x720)
+steam.sh[197374]: Running Steam on arch rolling 64-bit
+steam.sh[197374]: STEAM_RUNTIME is enabled automatically
+setup.sh[197448]: Steam runtime environment up-to-date!
+steam.sh[197374]: Steam client's requirements are satisfied
+03/18 20:56:15 Init: Installing breakpad exception handler for appid(steam)/version(1709846872)/tid(197501)
+glx: failed to create dri3 screen
+failed to load driver: nouveau
+wlserver: [types/wlr_compositor.c:692] New wlr_surface 0x5f97e7f34750 (res 0x5f97e7f64910)
+xwm: got the same buffer committed twice, ignoring.
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported maximum keycode 708, clipping.
+>                   X11 cannot support keycodes above 255.
+> Warning:          Could not resolve keysym XF86CameraAccessEnable
+> Warning:          Could not resolve keysym XF86CameraAccessDisable
+> Warning:          Could not resolve keysym XF86CameraAccessToggle
+> Warning:          Could not resolve keysym XF86NextElement
+> Warning:          Could not resolve keysym XF86PreviousElement
+> Warning:          Could not resolve keysym XF86AutopilotEngageToggle
+> Warning:          Could not resolve keysym XF86MarkWaypoint
+> Warning:          Could not resolve keysym XF86Sos
+> Warning:          Could not resolve keysym XF86NavChart
+> Warning:          Could not resolve keysym XF86FishingChart
+> Warning:          Could not resolve keysym XF86SingleRangeRadar
+> Warning:          Could not resolve keysym XF86DualRangeRadar
+> Warning:          Could not resolve keysym XF86RadarOverlay
+> Warning:          Could not resolve keysym XF86TraditionalSonar
+> Warning:          Could not resolve keysym XF86ClearvuSonar
+> Warning:          Could not resolve keysym XF86SidevuSonar
+> Warning:          Could not resolve keysym XF86NavInfo
+Errors from xkbcomp are not fatal to the X server
+vulkan: Creating Gamescope nested swapchain with format 64 and colorspace 0
+pipewire: renegotiating stream params (size: 1269x1380)
+xwm: error 3: BadWindow (invalid Window parameter) request 15 minor 0 serial 342
+glx: failed to create dri3 screen
+failed to load driver: nouveau
+glx: failed to create dri3 screen
+failed to load driver: nouveau
+steamwebhelper.sh[197661]: === Mon Mar 18 08:56:22 PM CST 2024 ===
+steamwebhelper.sh[197661]: Starting steamwebhelper under bootstrap sniper steam runtime at /home/night/.local/share/Steam/ubuntu12_64/steam-runtime-sniper
+glx: failed to create dri3 screen
+failed to load driver: nouveau
+tid(197501) burning pthread_key_t == 0 so we never use it
+[2024-03-18 20:56:15] Startup - updater built Mar  6 2024 20:27:25
+[2024-03-18 20:56:15] Startup - Steam Client launched with: '/home/night/.local/share/Steam/ubuntu12_32/steam'
+minidumps folder is set to /tmp/dumps
+Looks like steam didn't shutdown cleanly, scheduling immediate update check
+[2024-03-18 20:56:16] Loading cached metrics from disk (/home/night/.local/share/Steam/package/steam_client_metrics.bin)
+[2024-03-18 20:56:16] Using the following download hosts for Public, Realm steamglobal
+[2024-03-18 20:56:16] 1. https://client-update.akamai.steamstatic.com, /, Realm 'steamglobal', weight was 1000, source = 'update_hosts_cached.vdf'
+[2024-03-18 20:56:16] 2. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'update_hosts_cached.vdf'
+[2024-03-18 20:56:16] 3. https://cdn.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2024-03-18 20:56:16] Checking for update on startup
+[2024-03-18 20:56:16] 正在检查可用更新...
+[2024-03-18 20:56:16] Downloading manifest: https://client-update.akamai.steamstatic.com/steam_client_ubuntu12
+[2024-03-18 20:56:16] Manifest download: send request
+[2024-03-18 20:56:16] Manifest download: waiting for download to finish
+[2024-03-18 20:56:17] Manifest download: finished
+[2024-03-18 20:56:17] Download skipped: /steam_client_ubuntu12 version 1709846872, installed version 1709846872, existing pending version 0
+[2024-03-18 20:56:17] Nothing to do
+[2024-03-18 20:56:17] 正在验证安装...
+[2024-03-18 20:56:17] Performing checksum verification of executable files
+[2024-03-18 20:56:17] Verification complete
+UpdateUI: showing logo
+Steam logging initialized: directory: /home/night/.local/share/Steam/logs
+
+XRRGetOutputInfo Workaround: initialized with override: 1 real: 0xee379dc0
+XRRGetCrtcInfo Workaround: initialized with override: 1 real: 0xee378500
+CAppInfoCacheReadFromDiskThread took 56 milliseconds to initialize
+Steam Runtime Launch Service: starting steam-runtime-launcher-service
+Steam Runtime Launch Service: steam-runtime-launcher-service is running pid 197786
+bus_name=com.steampowered.PressureVessel.LaunchAlongsideSteam
+glx: failed to create dri3 screen
+failed to load driver: nouveau
+ATTENTION: default value of option vk_khr_present_wait overridden by environment.
+ATTENTION: default value of option vk_khr_present_wait overridden by environment.
+Fossilize INFO: Setting autogroup scheduling.
+wlserver: [types/wlr_compositor.c:692] New wlr_surface 0x5f97e7f301f0 (res 0x5f97e7f80510)
+xwm: Unhandled NET_WM_STATE property change: _NET_WM_STATE_MAXIMIZED_VERT
+xwm: Unhandled NET_WM_STATE property change: _NET_WM_STATE_MAXIMIZED_HORZ
+xwm: got the same buffer committed twice, ignoring.
+BRefreshApplicationsInLibrary 1: 24ms
+CDesktopCapturePipeWire: Opening DRM render node /dev/dri/renderD128
+CDesktopCapturePipeWire: setting stream node ID: 61
+BuildCompleteAppOverviewChange: 290 apps
+RegisterForAppOverview 1: 36ms
+RegisterForAppOverview 2: 36ms
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+assert_20240318205636_34.dmp[198264]: Uploading dump (out-of-process)
+/tmp/dumps/assert_20240318205636_34.dmp
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+assert_20240318205636_34.dmp[198264]: Finished uploading minidump (out-of-process): success = yes
+assert_20240318205636_34.dmp[198264]: response: CrashID=bp-39dbf39a-7df6-4487-84fe-0f5072240318
+assert_20240318205636_34.dmp[198264]: file ''/tmp/dumps/assert_20240318205636_34.dmp'', upload yes: ''CrashID=bp-39dbf39a-7df6-4487-84fe-0f5072240318''
+BuildCompleteAppOverviewChange: 297 apps
+gamescope: Received Interrupt signal, forwarding to child!
+gamescope: Received Interrupt signal, attempting shutdown!
+gamescope: children shut down!
+gamescope: Received Interrupt signal, attempting shutdown!
+No CAP_SYS_NICE, falling back to regular-priority compute and threads.
+Performance will be affected.
+ATTENTION: default value of option vk_khr_present_wait overridden by environment.
+vulkan: physical device 10de:2560 compute queue doesn't support presenting on our surface, using graphics queue
+vulkan: selecting physical device 'NVIDIA GeForce RTX 3060 Laptop GPU': queue family 0 (general queue family 0)
+vulkan: physical device supports DRM format modifiers
+wlserver: [backend/headless/backend.c:67] Creating headless backend
+vulkan: vkGetPhysicalDeviceFormatProperties2 returned zero modifiers for DRM format 0x38344241 (VkResult: 0)
+vulkan: vkGetPhysicalDeviceFormatProperties2 returned zero modifiers for DRM format 0x38344258 (VkResult: 0)
+vulkan: supported DRM formats for sampling usage:
+vulkan:   AR24 (0x34325241)
+vulkan:   XR24 (0x34325258)
+vulkan:   AB24 (0x34324241)
+vulkan:   XB24 (0x34324258)
+vulkan:   RG16 (0x36314752)
+vulkan:   NV12 (0x3231564E)
+vulkan:   AB4H (0x48344241)
+vulkan:   XB4H (0x48344258)
+vulkan:   AB30 (0x30334241)
+vulkan:   XB30 (0x30334258)
+vulkan:   AR30 (0x30335241)
+vulkan:   XR30 (0x30335258)
+vulkan: Creating Gamescope nested swapchain with format 64 and colorspace 0
+wlserver: Running compositor on wayland display 'gamescope-0'
+wlserver: [backend/headless/backend.c:17] Starting headless backend
+wlserver: [xwayland/sockets.c:63] Failed to bind socket @/tmp/.X11-unix/X0: Address already in use
+wlserver: [util/env.c:9] Loading WLR_NO_HARDWARE_CURSORS option: 1
+wlserver: [types/output/output.c:435] WLR_NO_HARDWARE_CURSORS set, forcing software cursors
+wlserver: [xwayland/server.c:108] Starting Xwayland on :2
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Could not resolve keysym XF86CameraAccessEnable
+> Warning:          Could not resolve keysym XF86CameraAccessDisable
+> Warning:          Could not resolve keysym XF86CameraAccessToggle
+> Warning:          Could not resolve keysym XF86NextElement
+> Warning:          Could not resolve keysym XF86PreviousElement
+> Warning:          Could not resolve keysym XF86AutopilotEngageToggle
+> Warning:          Could not resolve keysym XF86MarkWaypoint
+> Warning:          Could not resolve keysym XF86Sos
+> Warning:          Could not resolve keysym XF86NavChart
+> Warning:          Could not resolve keysym XF86FishingChart
+> Warning:          Could not resolve keysym XF86SingleRangeRadar
+> Warning:          Could not resolve keysym XF86DualRangeRadar
+> Warning:          Could not resolve keysym XF86RadarOverlay
+> Warning:          Could not resolve keysym XF86TraditionalSonar
+> Warning:          Could not resolve keysym XF86ClearvuSonar
+> Warning:          Could not resolve keysym XF86SidevuSonar
+> Warning:          Could not resolve keysym XF86NavInfo
+Errors from xkbcomp are not fatal to the X server
+wlserver: [types/wlr_compositor.c:692] New wlr_surface 0x5b849a1f2030 (res 0x5b849a1cbf20)
+wlserver: [xwayland/server.c:273] Xserver is ready
+pipewire: stream state changed: connecting
+pipewire: stream state changed: paused
+pipewire: stream available on node ID: 61
+vblank: Using timerfd.
+vulkan: Creating Gamescope nested swapchain with format 64 and colorspace 0
+pipewire: renegotiating stream params (size: 1280x720)
+steam.sh[198885]: Running Steam on arch rolling 64-bit
+steam.sh[198885]: STEAM_RUNTIME is enabled automatically
+setup.sh[198969]: Steam runtime environment up-to-date!
+steam.sh[198885]: Steam client's requirements are satisfied
+03/18 20:57:25 Init: Installing breakpad exception handler for appid(steam)/version(1709846872)/tid(199028)
+glx: failed to create dri3 screen
+failed to load driver: nouveau
+wlserver: [types/wlr_compositor.c:692] New wlr_surface 0x5b849a19f750 (res 0x5b849a1cf910)
+xwm: got the same buffer committed twice, ignoring.
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported maximum keycode 708, clipping.
+>                   X11 cannot support keycodes above 255.
+> Warning:          Could not resolve keysym XF86CameraAccessEnable
+> Warning:          Could not resolve keysym XF86CameraAccessDisable
+> Warning:          Could not resolve keysym XF86CameraAccessToggle
+> Warning:          Could not resolve keysym XF86NextElement
+> Warning:          Could not resolve keysym XF86PreviousElement
+> Warning:          Could not resolve keysym XF86AutopilotEngageToggle
+> Warning:          Could not resolve keysym XF86MarkWaypoint
+> Warning:          Could not resolve keysym XF86Sos
+> Warning:          Could not resolve keysym XF86NavChart
+> Warning:          Could not resolve keysym XF86FishingChart
+> Warning:          Could not resolve keysym XF86SingleRangeRadar
+> Warning:          Could not resolve keysym XF86DualRangeRadar
+> Warning:          Could not resolve keysym XF86RadarOverlay
+> Warning:          Could not resolve keysym XF86TraditionalSonar
+> Warning:          Could not resolve keysym XF86ClearvuSonar
+> Warning:          Could not resolve keysym XF86SidevuSonar
+> Warning:          Could not resolve keysym XF86NavInfo
+Errors from xkbcomp are not fatal to the X server
+vulkan: Creating Gamescope nested swapchain with format 64 and colorspace 0
+pipewire: renegotiating stream params (size: 1269x1380)
+xwm: error 3: BadWindow (invalid Window parameter) request 15 minor 0 serial 342
+glx: failed to create dri3 screen
+failed to load driver: nouveau
+glx: failed to create dri3 screen
+failed to load driver: nouveau
+steamwebhelper.sh[199192]: === Mon Mar 18 08:57:32 PM CST 2024 ===
+steamwebhelper.sh[199192]: Starting steamwebhelper under bootstrap sniper steam runtime at /home/night/.local/share/Steam/ubuntu12_64/steam-runtime-sniper
+glx: failed to create dri3 screen
+failed to load driver: nouveau
+tid(199028) burning pthread_key_t == 0 so we never use it
+[2024-03-18 20:57:25] Startup - updater built Mar  6 2024 20:27:25
+[2024-03-18 20:57:25] Startup - Steam Client launched with: '/home/night/.local/share/Steam/ubuntu12_32/steam'
+minidumps folder is set to /tmp/dumps
+Looks like steam didn't shutdown cleanly, scheduling immediate update check
+[2024-03-18 20:57:25] Loading cached metrics from disk (/home/night/.local/share/Steam/package/steam_client_metrics.bin)
+[2024-03-18 20:57:25] Using the following download hosts for Public, Realm steamglobal
+[2024-03-18 20:57:25] 1. https://client-update.akamai.steamstatic.com, /, Realm 'steamglobal', weight was 1000, source = 'update_hosts_cached.vdf'
+[2024-03-18 20:57:25] 2. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'update_hosts_cached.vdf'
+[2024-03-18 20:57:25] 3. https://cdn.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2024-03-18 20:57:25] Checking for update on startup
+[2024-03-18 20:57:25] 正在检查可用更新...
+[2024-03-18 20:57:25] Downloading manifest: https://client-update.akamai.steamstatic.com/steam_client_ubuntu12
+[2024-03-18 20:57:25] Manifest download: send request
+[2024-03-18 20:57:25] Manifest download: waiting for download to finish
+[2024-03-18 20:57:26] Manifest download: finished
+[2024-03-18 20:57:26] Download skipped: /steam_client_ubuntu12 version 1709846872, installed version 1709846872, existing pending version 0
+[2024-03-18 20:57:26] Nothing to do
+[2024-03-18 20:57:26] 正在验证安装...
+[2024-03-18 20:57:26] Performing checksum verification of executable files
+[2024-03-18 20:57:27] Verification complete
+UpdateUI: showing logo
+Steam logging initialized: directory: /home/night/.local/share/Steam/logs
+
+XRRGetOutputInfo Workaround: initialized with override: 1 real: 0xe76b1dc0
+XRRGetCrtcInfo Workaround: initialized with override: 1 real: 0xe76b0500
+CAppInfoCacheReadFromDiskThread took 57 milliseconds to initialize
+Steam Runtime Launch Service: starting steam-runtime-launcher-service
+Steam Runtime Launch Service: steam-runtime-launcher-service is running pid 199316
+bus_name=com.steampowered.PressureVessel.LaunchAlongsideSteam
+glx: failed to create dri3 screen
+failed to load driver: nouveau
+ATTENTION: default value of option vk_khr_present_wait overridden by environment.
+ATTENTION: default value of option vk_khr_present_wait overridden by environment.
+wlserver: [types/wlr_compositor.c:692] New wlr_surface 0x5b849a19aa60 (res 0x5b849a1e8f70)
+xwm: Unhandled NET_WM_STATE property change: _NET_WM_STATE_MAXIMIZED_VERT
+xwm: Unhandled NET_WM_STATE property change: _NET_WM_STATE_MAXIMIZED_HORZ
+xwm: got the same buffer committed twice, ignoring.
+BRefreshApplicationsInLibrary 1: 19ms
+CDesktopCapturePipeWire: Opening DRM render node /dev/dri/renderD128
+CDesktopCapturePipeWire: setting stream node ID: 61
+BuildCompleteAppOverviewChange: 290 apps
+RegisterForAppOverview 1: 41ms
+RegisterForAppOverview 2: 41ms
+wlserver: [types/wlr_compositor.c:692] New wlr_surface 0x5b849a19bff0 (res 0x5b849a1e5530)
+xwm: Unhandled NET_WM_STATE property change: _NET_WM_STATE_MAXIMIZED_VERT
+xwm: Unhandled NET_WM_STATE property change: _NET_WM_STATE_MAXIMIZED_HORZ
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+assert_20240318205745_33.dmp[199717]: Uploading dump (out-of-process)
+/tmp/dumps/assert_20240318205745_33.dmp
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+src/clientdll/remotestoragefilesynccontext.cpp (947) : Assertion Failed: Failed to write file after download (2)
+
+assert_20240318205745_33.dmp[199717]: Finished uploading minidump (out-of-process): success = yes
+assert_20240318205745_33.dmp[199717]: response: CrashID=bp-9ef1322c-aea9-4334-b7da-5b3b72240318
+assert_20240318205745_33.dmp[199717]: file ''/tmp/dumps/assert_20240318205745_33.dmp'', upload yes: ''CrashID=bp-9ef1322c-aea9-4334-b7da-5b3b72240318''
+wlserver: [types/wlr_compositor.c:692] New wlr_surface 0x5b849a19cd40 (res 0x5b849a1e9750)
+(EE) failed to read Wayland events: Broken pipe
