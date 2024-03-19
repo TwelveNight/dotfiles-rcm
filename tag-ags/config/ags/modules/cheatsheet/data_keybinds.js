@@ -59,6 +59,7 @@ export const keybindList = [
         { keys: ["", "+", "O"], action: "Fullscreen 1" },
         { keys: ["", "Alt", "+", "O"], action: "Fullscreen 0" },
         { keys: ["", "Alt", "+", "F"], action: "Fake fullscreen" },
+        { keys: ["", "Ctrl", "+", "P"], action: "Pin a window" },
       ],
       id: 3,
     },
