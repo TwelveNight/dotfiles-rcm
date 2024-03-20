@@ -168,7 +168,7 @@ export const keybindList = [
         { keys: ["", "+", "C"], action: "Launch editor: vscode" },
         { keys: ["", "+", "X"], action: "Launch editor: GNOME Text Editor" },
         {
-          keys: ["Ctrl", "Alt", "+", "I"],
+          keys: ["Ctrl", "", "+", "I"],
           action: "Launch settings: GNOME Control center",
         },
         {
