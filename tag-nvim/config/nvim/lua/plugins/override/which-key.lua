@@ -3,6 +3,7 @@ return {
   opts = {
     defaults = {
       ["z"] = { name = "+fold" },
+      ["<leader>G"] = { name = "+Copilot" },
       ["<leader>m"] = { name = "+CMake" },
       ["<leader>ms"] = { name = "+CMake select" },
       ["<leader>o"] = { name = "+Go" },

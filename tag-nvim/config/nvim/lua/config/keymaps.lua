@@ -61,6 +61,38 @@ keymap.set("v", "<leader>rc", ":<cmd>SnipClose<cr>", { noremap = true, silent = 
 -- chatgpt
 --keymap.set("n", "<leader>ge", "<cmd>ChatGPTEditWithInstructions<cr>")
 
+-- copilot
+keymap.set(
+  "n",
+  "<leader>Ga",
+  ":lua require('copilot.suggestion').accept()<cr>",
+  { noremap = true, silent = true, desc = "Accept" }
+)
+keymap.set(
+  "n",
+  "<leader>Gn",
+  ":lua require('copilot.suggestion').next()<cr>",
+  { noremap = true, silent = true, desc = "Next" }
+)
+keymap.set(
+  "n",
+  "<leader>Gp",
+  ":lua require('copilot.suggestion').prev()<cr>",
+  { noremap = true, silent = true, desc = "Prev" }
+)
+keymap.set(
+  "n",
+  "<leader>Gs",
+  ":lua require('copilot.suggestion').dismiss()<cr>",
+  { noremap = true, silent = true, desc = "Dismiss" }
+)
+keymap.set(
+  "n",
+  "<leader>Gt",
+  ":lua require('copilot.suggestion').toggle_auto_trigger()<cr>",
+  { noremap = true, silent = true, desc = "Toggle Auto Trigger" }
+)
+
 -- set telescope keymaps
 keymap.set(
   "n",
