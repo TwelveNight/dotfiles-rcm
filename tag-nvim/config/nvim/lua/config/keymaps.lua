@@ -16,8 +16,8 @@ keymap.set("n", "n", "nzzzv", opts)
 keymap.set("n", "N", "Nzzzv", opts)
 
 -- quit
-keymap.set("n", "q", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "quit" })
-keymap.set("n", "Q", "<cmd>:qa!<cr>", { noremap = true, silent = true, desc = "quit" })
+-- keymap.set("n", "q", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "quit" })
+keymap.set("n", "Q", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "quit" })
 
 -- move
 keymap.set("i", "<C-j>", "<Down>", { noremap = true, silent = true, desc = "down" })
