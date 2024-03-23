@@ -10,7 +10,6 @@
 /home/night/.dotfiles/tag-fish/config/fish
 /home/night/.dotfiles/tag-rcm
 /home/night/.dotfiles/tag-zsh
-/home/night/.dotfiles/tag-nvim/config/nvim
 /home/night/.dotfiles/tag-neofetch/config/neofetch
 /home/night/.dotfiles/tag-ags/config/ags/
 /home/night/.dotfiles/tag-tmux/config/tmux
@@ -20,3 +19,4 @@
 /home/night/.dotfiles/tag-vscodium/config/VSCodium/User
 /home/night/.config/lvim
 /home/night/.dotfiles/tag-nvim/local/share/nvim/project_nvim
+/home/night/.dotfiles/tag-nvim/config/nvim
