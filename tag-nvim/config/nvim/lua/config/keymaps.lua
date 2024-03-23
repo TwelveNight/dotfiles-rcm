@@ -7,6 +7,14 @@ local opts = { noremap = true, silent = true }
 -- back
 keymap.set("i", "jk", "<Esc>")
 
+-- Center C-d and C-u
+keymap.set("n", "<C-d>", "<C-d>zz", opts)
+keymap.set("n", "<C-u>", "<C-u>zz", opts)
+
+-- Center search results
+keymap.set("n", "n", "nzzzv", opts)
+keymap.set("n", "N", "Nzzzv", opts)
+
 -- quit
 keymap.set("n", "q", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "quit" })
 keymap.set("n", "Q", "<cmd>:qa!<cr>", { noremap = true, silent = true, desc = "quit" })
@@ -92,6 +100,8 @@ keymap.set(
   ":lua require('copilot.suggestion').toggle_auto_trigger()<cr>",
   { noremap = true, silent = true, desc = "Toggle Auto Trigger" }
 )
+keymap.set("n", "<leader>Ge", ":Copilot enable<cr>", { noremap = true, silent = true, desc = "Enable the Copilot" })
+keymap.set("n", "<leader>Gd", ":Copilot disable<cr>", { noremap = true, silent = true, desc = "disable the Copilot" })
 
 -- set telescope keymaps
 keymap.set(
@@ -102,8 +112,9 @@ keymap.set(
 )
 
 -- translate
-keymap.set({ "n" }, "t", "<Plug>TranslateW", { silent = true, desc = "Translate Word" })
-keymap.set({ "v" }, "t", "<Plug>TranslateWV", { silent = true, desc = "Translate Word" })
+-- <C-w>p to into the translation window
+keymap.set({ "n" }, "<leader>Tt", "<Plug>TranslateW", { silent = true, desc = "Translate Word" })
+keymap.set({ "v" }, "<leader>Tt", "<Plug>TranslateWV", { silent = true, desc = "Translate Word" })
 
 --debug
 keymap.set("n", "<F9>", function()
@@ -148,3 +159,15 @@ keymap.set(
   "<cmd>Lspsaga outgoing_calls<cr>",
   { noremap = true, silent = true, desc = "outgoing_calls" }
 )
+
+-- Launch lazygit as full screen
+local Util = require("lazyvim.util")
+keymap.set("n", "<leader>gg", function()
+  Util.terminal.open({ "lazygit" }, {
+    size = {
+      width = 1,
+      height = 1,
+    },
+    border = "none",
+  })
+end, { desc = "Lazygit" })
