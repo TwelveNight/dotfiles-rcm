@@ -3,6 +3,10 @@
 -- Add any additional keymaps here
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+
+-- Scroll document/enter document
+-- (<c-f>/<c-b>) / K one more time to enter the docs
+
 -- local noremap = true, silent = true = { noremap = true, silent = true }
 -- back
 keymap.set("i", "jk", "<Esc>")
@@ -117,8 +121,18 @@ keymap.set({ "n" }, "<leader>Tn", "<Plug>Translate", { silent = true, desc = "Tr
 keymap.set({ "v" }, "<leader>Tn", "<Plug>TranslateV", { silent = true, desc = "Translate Word in Nocie" })
 keymap.set({ "n" }, "<leader>Tt", "<Plug>TranslateW", { silent = true, desc = "Translate Word in Window" })
 keymap.set({ "v" }, "<leader>Tt", "<Plug>TranslateWV", { silent = true, desc = "Translate Word in Window" })
-keymap.set({ "n" }, "<leader>Tr", "<Plug>TranslateR", { silent = true, desc = "Translate Word and Replace the word" })
-keymap.set({ "v" }, "<leader>Tr", "<Plug>TranslateRV", { silent = true, desc = "Translate Word and Replace the word" })
+keymap.set(
+  { "n" },
+  "<leader>Tr",
+  ":TranslateR --target_lang=english<cr>",
+  { silent = true, desc = "Translate Word and Replace the word" }
+)
+keymap.set(
+  { "v" },
+  "<leader>Tr",
+  ":TranslateR --target_lang=english<cr>",
+  { silent = true, desc = "Translate Word and Replace the word" }
+)
 keymap.set(
   { "n" },
   "<leader>Tx",
