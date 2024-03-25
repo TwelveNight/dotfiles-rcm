@@ -20,8 +20,9 @@ else
 	# ags run-js "wallpaper.set('')"
 	# sleep 0.1 && ags run-js "wallpaper.set('${imgpath}')" &
 	swww img "$imgpath" --transition-step 100 --transition-fps 60 \
-		--transition-type grow --transition-angle 30 --transition-duration 1 \
+		--transition-type grow --transition-duration 1 \
 		--transition-pos "$cursorposx, $cursorposy_inverted"
+	# --transition-angle 30
 fi
 
 # Generate colors for ags n stuff
