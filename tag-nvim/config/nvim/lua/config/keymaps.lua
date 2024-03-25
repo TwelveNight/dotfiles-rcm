@@ -113,8 +113,24 @@ keymap.set(
 
 -- translate
 -- <C-w>p to into the translation window
-keymap.set({ "n" }, "<leader>Tt", "<Plug>TranslateW", { silent = true, desc = "Translate Word" })
-keymap.set({ "v" }, "<leader>Tt", "<Plug>TranslateWV", { silent = true, desc = "Translate Word" })
+keymap.set({ "n" }, "<leader>Tn", "<Plug>Translate", { silent = true, desc = "Translate Word in Nocie" })
+keymap.set({ "v" }, "<leader>Tn", "<Plug>TranslateV", { silent = true, desc = "Translate Word in Nocie" })
+keymap.set({ "n" }, "<leader>Tt", "<Plug>TranslateW", { silent = true, desc = "Translate Word in Window" })
+keymap.set({ "v" }, "<leader>Tt", "<Plug>TranslateWV", { silent = true, desc = "Translate Word in Window" })
+keymap.set({ "n" }, "<leader>Tr", "<Plug>TranslateR", { silent = true, desc = "Translate Word and Replace the word" })
+keymap.set({ "v" }, "<leader>Tr", "<Plug>TranslateRV", { silent = true, desc = "Translate Word and Replace the word" })
+keymap.set(
+  { "n" },
+  "<leader>Tx",
+  "<Plug>TranslateX",
+  { silent = true, desc = "Translate Word and Write to the clipboard" }
+)
+keymap.set(
+  { "v" },
+  "<leader>Tx",
+  "<Plug>TranslateXV",
+  { silent = true, desc = "Translate Word and Write to the clipboard" }
+)
 
 --debug
 keymap.set("n", "<F9>", function()
