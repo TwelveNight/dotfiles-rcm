@@ -144,6 +144,9 @@ alias ido="lexido"
 alias t='tmux'
 alias ta='tmux a'
 
+# musicfox
+alias mfox='musicfox'
+
 eval "$(zoxide init zsh --cmd cd)"
 
 
