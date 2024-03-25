@@ -73,7 +73,7 @@ return {
       }
     end,
   },
-
+  -- disable the return type in the LSP completion
   {
     "nvim-cmp",
     opts = function(_, opts)
