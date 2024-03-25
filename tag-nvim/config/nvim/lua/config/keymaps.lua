@@ -171,3 +171,24 @@ keymap.set("n", "<leader>gg", function()
     border = "none",
   })
 end, { desc = "Lazygit" })
+
+-- 初始化全局变量 enc_index
+local enc_index = 0
+
+-- 定义函数 ChangeFileencoding
+function ChangeFileencoding()
+  -- 编码列表
+  local encodings = { "GBK", "koi8-u", "cp866" }
+
+  -- 构建命令字符串
+  local command = string.format("e ++enc=%s %%:p", encodings[enc_index + 1])
+
+  -- 执行命令
+  vim.cmd(command)
+
+  -- 更新 enc_index
+  enc_index = (enc_index + 1) % 3
+end
+
+-- 将函数映射到 F8 键
+vim.api.nvim_set_keymap("n", "<F8>", ":lua ChangeFileencoding()<CR>", { noremap = true, silent = true })
