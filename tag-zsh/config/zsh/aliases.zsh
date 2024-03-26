@@ -147,6 +147,10 @@ alias ta='tmux a'
 # musicfox
 alias mfox='musicfox'
 
+# trans
+alias trbz='trans -b :zh'
+alias trbe='trans -b :en'
+
 eval "$(zoxide init zsh --cmd cd)"
 
 
