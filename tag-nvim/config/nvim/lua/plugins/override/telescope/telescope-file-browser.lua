@@ -10,52 +10,6 @@ return {
     },
     keys = {
       {
-        "<leader>fP",
-        function()
-          require("telescope.builtin").find_files({
-            cwd = require("lazy.core.config").options.root,
-          })
-        end,
-        desc = "Find Plugin File",
-      },
-      {
-        ";f",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.find_files({
-            no_ignore = false,
-            hidden = true,
-          })
-        end,
-        desc = "Lists files in your current working directory, respects .gitignore",
-      },
-      {
-        ";r",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.live_grep({
-            additional_args = { "--hidden" },
-          })
-        end,
-        desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
-      },
-      {
-        "\\\\",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.buffers()
-        end,
-        desc = "Lists open buffers",
-      },
-      {
-        ";t",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.help_tags()
-        end,
-        desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
-      },
-      {
         ";;",
         function()
           local builtin = require("telescope.builtin")
@@ -63,24 +17,62 @@ return {
         end,
         desc = "Resume the previous telescope picker",
       },
+      { ";a", "<cmd>Telescope autocommands<cr>", desc = "Auto Commands" },
+      { ";b", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Switch Buffer" },
+      { ";c", "<cmd>Telescope command_history<cr>", desc = "Command History" },
+      { ";C", "<cmd>Telescope commands<cr>", desc = "Commands" },
       {
-        ";e",
+        ";d",
         function()
           local builtin = require("telescope.builtin")
           builtin.diagnostics()
         end,
         desc = "Lists Diagnostics for all open buffers or a specific buffer",
       },
+      { ";D", "<cmd>Telescope diagnostics<cr>", desc = "Workspace Diagnostics" },
+      { ";f", LazyVim.telescope("files"), desc = "Find Files (Root Dir)" },
+      { ";F", LazyVim.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
+      { ";g", LazyVim.telescope("live_grep"), desc = "Grep (Root Dir)" },
+      { ";G", LazyVim.telescope("live_grep", { cwd = false }), desc = "Grep (cwd)" },
+      { ";h", "<cmd>Telescope help_tags<cr>", desc = "Help Pages" },
+      { ";k", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
+      { ";M", "<cmd>Telescope man_pages<cr>", desc = "Man Pages" },
+      { ";m", "<cmd>Telescope marks<cr>", desc = "Jump to Mark" },
+      {
+        ";p",
+        function()
+          require("telescope.builtin").find_files({
+            cwd = require("lazy.core.config").options.root,
+          })
+        end,
+        desc = "Find Plugin File",
+      },
+      { ";r", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
       {
         ";s",
         function()
-          local builtin = require("telescope.builtin")
-          builtin.treesitter()
+          require("telescope.builtin").lsp_document_symbols({
+            symbols = require("lazyvim.config").get_kind_filter(),
+          })
         end,
-        desc = "Lists Function names, variables, from Treesitter",
+        desc = "Goto Symbol",
       },
       {
-        "sf",
+        ";S",
+        function()
+          require("telescope.builtin").lsp_dynamic_workspace_symbols({
+            symbols = require("lazyvim.config").get_kind_filter(),
+          })
+        end,
+        desc = "Goto Symbol (Workspace)",
+      },
+      { ";u", LazyVim.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with Preview" },
+      { ";w", LazyVim.telescope("grep_string", { word_match = "-w" }), desc = "Word (Root Dir)" },
+      { ";W", LazyVim.telescope("grep_string", { cwd = false, word_match = "-w" }), desc = "Word (cwd)" },
+      { ";w", LazyVim.telescope("grep_string"), mode = "v", desc = "Selection (Root Dir)" },
+      { ";W", LazyVim.telescope("grep_string", { cwd = false }), mode = "v", desc = "Selection (cwd)" },
+      {
+        ";o",
         function()
           local telescope = require("telescope")
 
