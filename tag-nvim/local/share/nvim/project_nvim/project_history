@@ -12,7 +12,6 @@
 /home/night/.dotfiles/tag-zsh
 /home/night/.dotfiles/tag-neofetch/config/neofetch
 /home/night/.dotfiles/tag-ags/config/ags/
-/home/night/.dotfiles/tag-tmux/config/tmux
 /home/night/.dotfiles/tag-lazygit/config/lazygit
 /home/night/.dotfiles/tag-idea
 /home/night/.dotfiles/tag-git
@@ -20,3 +19,4 @@
 /home/night/.config/lvim
 /home/night/.dotfiles/tag-nvim/local/share/nvim/project_nvim
 /home/night/.dotfiles/tag-nvim/config/nvim
+/home/night/.dotfiles/tag-tmux/config/tmux
