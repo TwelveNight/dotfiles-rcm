@@ -21,7 +21,8 @@ keymap.set("n", "N", "Nzzzv", opts)
 
 -- quit
 -- keymap.set("n", "q", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "quit" })
-keymap.set("n", "Q", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "quit" })
+keymap.set("n", "Q", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "Quit window" })
+keymap.set("n", "q", "<cmd>bdelete<cr>", { desc = "Kill Buffer" })
 
 -- move
 keymap.set("i", "<C-j>", "<Down>", { noremap = true, silent = true, desc = "down" })
@@ -146,15 +147,8 @@ keymap.set(
   { silent = true, desc = "Translate Word and Write to the clipboard" }
 )
 
---debug
-keymap.set("n", "<F9>", function()
-  require("dap").run_last()
-end, { noremap = true, silent = true, desc = "run last" })
-
-keymap.set("n", "<F10>", function()
-  require("dap").restart()
-end, { noremap = true, silent = true, desc = "restart" })
-
+-- debug
+-- NOTE: c/c++ debug neeg -g flag to instructs the compiler to generate debug letters
 keymap.set("n", "<F4>", function()
   require("dap").terminate()
 end, { noremap = true, silent = true, desc = "terminate" })
@@ -174,6 +168,14 @@ end, { noremap = true, silent = true, desc = "step_into" })
 keymap.set("n", "<F8>", function()
   require("dap").step_out()
 end, { noremap = true, silent = true, desc = "step_out" })
+
+keymap.set("n", "<F9>", function()
+  require("dap").run_last()
+end, { noremap = true, silent = true, desc = "run last" })
+
+keymap.set("n", "<F10>", function()
+  require("dap").restart()
+end, { noremap = true, silent = true, desc = "restart" })
 
 -- lspsaga
 keymap.set("n", "<leader>k", "<cmd>Lspsaga hover_doc<CR>", { noremap = true, silent = true, desc = "hover_doc" })
@@ -221,4 +223,4 @@ function ChangeFileencoding()
 end
 
 -- 将函数映射到 F8 键
-vim.api.nvim_set_keymap("n", "<F8>", ":lua ChangeFileencoding()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F11>", ":lua ChangeFileencoding()<CR>", { noremap = true, silent = true })
