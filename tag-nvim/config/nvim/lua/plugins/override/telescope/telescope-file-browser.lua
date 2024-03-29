@@ -153,4 +153,20 @@ return {
       require("telescope").load_extension("file_browser")
     end,
   },
+
+  {
+    "jvgrootveld/telescope-zoxide", -- <c-b> does not work
+    keys = {
+      {
+        ";z",
+        function()
+          require("telescope").extensions.zoxide.list()
+        end,
+        desc = "Zoxide file navigation",
+      },
+    },
+    config = function()
+      require("telescope").load_extension("zoxide")
+    end,
+  },
 }
