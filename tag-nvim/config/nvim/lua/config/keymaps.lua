@@ -19,10 +19,12 @@ keymap.set("n", "<C-u>", "<C-u>zz", opts)
 keymap.set("n", "n", "nzzzv", opts)
 keymap.set("n", "N", "Nzzzv", opts)
 
+keymap.set("n", "W", "%", opts)
+
 -- quit
 -- keymap.set("n", "q", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "quit" })
-keymap.set("n", "Q", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "Quit window" })
-keymap.set("n", "q", "<cmd>bdelete<cr>", { desc = "Kill Buffer" })
+keymap.set("n", "<C-q>", "<cmd>:q<cr>", { noremap = true, silent = true, desc = "Quit window" })
+keymap.set("n", "Q", "<cmd>bdelete<cr>", { desc = "Kill Buffer" })
 
 -- move
 keymap.set("i", "<C-j>", "<Down>", { noremap = true, silent = true, desc = "down" })
