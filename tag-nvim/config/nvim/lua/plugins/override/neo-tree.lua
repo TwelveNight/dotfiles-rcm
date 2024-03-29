@@ -18,5 +18,12 @@ return {
         },
       },
     },
+    keys = {
+      {
+        "<leader>P",
+        "<cmd>Neotree reveal_force_cwd<cr>",
+        desc = "Explorer Neotree (reveal)",
+      },
+    },
   },
 }
