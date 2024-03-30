@@ -51,6 +51,8 @@ alias cat='bat'
 alias ca='cat'
 
 # vim
+alias vv='vi'
+alias vvv='vim'
 alias vim='nvim'
 alias vi='neovide'
 alias v='lvim'
