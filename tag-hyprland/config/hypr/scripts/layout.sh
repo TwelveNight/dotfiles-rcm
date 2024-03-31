@@ -1,51 +1,94 @@
 #!/usr/bin/env bash
 
-# Define the text to be linked
+# 定义文本和配置文件
 files=(
 	"$HOME/.config/hypr/custom/monitors/multi.conf"
 	"$HOME/.config/hypr/custom/monitors/single_external.conf"
 	"$HOME/.config/hypr/custom/monitors/single_internal.conf"
 	"$HOME/.config/hypr/custom/monitors/mirror.conf"
 )
+texts=(
+	"扩展布局"
+	"外接显示屏"
+	"内置屏幕"
+	"镜像布局"
+)
 
-# Get the parameters entered by the user
-if [ $# -eq 0 ]; then
+# 初始化变量
+selected_file="${files[0]}"
+selected_text="${texts[0]}"
+current_line=1
+exit_loop=false
+
+# 函数：显示菜单
+function show_menu() {
+	clear
 	echo "请选择显示器布局："
-	echo "1. 扩展布局"
-	echo "2. 外接显示屏"
-	echo "3. 内置屏幕"
-	echo "4. 镜像布局"
-	read -r num
-else
-	num=$1
-fi
+	for i in "${!texts[@]}"; do
+		if [ $((i + 1)) -eq $current_line ]; then
+			echo -e "  > ${texts[$i]}"
+		else
+			echo -e "    ${texts[$i]}"
+		fi
+	done
+}
 
-# Determine whether user input exists
-if [ -z "$num" ] || [ "$num" -lt 1 ] || [ "$num" -gt ${#files[@]} ]; then
-	echo "无效的输入，请重新输入！"
-	exit 1
-fi
+# 函数：选择选项
+function select_option() {
+	local choice=$1
+	case $choice in
+	j | ''$'\e'[B)
+		if [ $current_line -lt ${#texts[@]} ]; then
+			((current_line++))
+		fi
+		;;
+	k | ''$'\e'[A)
+		if [ $current_line -gt 1 ]; then
+			((current_line--))
+		fi
+		;;
+	"")
+		selected_file="${files[$((current_line - 1))]}"
+		selected_text="${texts[$((current_line - 1))]}"
+		exit_loop=true
+		;;
+	esac
+}
 
-# Select the file to link to
-selected_file="${files[$((num - 1))]}"
+# 函数：读取用户输入
+function read_input() {
+	read -s -n 1 key
+	if [[ $key == "" ]]; then
+		# 回车键
+		select_option $key
+		if [ "$selected_text" == "镜像布局" ]; then
+			bash "$HOME/.config/hypr/scripts/swwwreload.sh"
+		fi
+		hyprctl reload
+		killall ags ydotool
+		nohup ags >/dev/null 2>&1 &
+		sleep 1
+		clear
+		# 显示结果
+		if [ $? -eq 0 ]; then
+			echo "布局已切换为：$selected_text"
+		else
+			echo "布局切换失败！"
+		fi
+	elif [[ $key == $'\e' ]]; then
+		# 箭头键序列开始
+		read -s -n 2 key
+		select_option $key
+	else
+		select_option $key
+	fi
+}
 
-# Cover soft chain
+# 主循环
+while ! $exit_loop; do
+	show_menu
+	read_input
+done
+
+# 链接配置文件
 ln -sf "$selected_file" "$HOME/.config/hypr/custom/monitors.conf"
-
-# if layout is mirror, reload swww
-if [ "$num" -eq 4 ]; then
-	bash "$HOME/.config/hypr/scripts/swwwreload.sh"
-fi
-
-hyprctl reload
-
-killall ags ydotool
-nohup ags >/dev/null 2>&1 &
-
-sleep 1
-
-if [ $? -eq 0 ]; then
-	echo "布局已切换为：$selected_file"
-else
-	echo "布局切换失败！"
-fi
