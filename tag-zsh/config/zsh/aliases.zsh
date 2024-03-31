@@ -45,6 +45,7 @@ alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
+alias cz='cd'
 
 #cat
 alias cat='bat'
@@ -64,7 +65,7 @@ alias ls='lsd --all' # short list
 alias  l='lsd --long' # long list
 alias la='lsd --all' # all files and dirs(including hidden)
 alias ld='lsd -lD' # long list dirs
-alias ll='lsd -g --all --header --long  --git' # long format
+alias ll='lsd -g --header --long' # long format
 alias lt='lsd --tree' # tree listing
 alias l.='lsd --all | grep -E "^\."' # show only hidden files
 
