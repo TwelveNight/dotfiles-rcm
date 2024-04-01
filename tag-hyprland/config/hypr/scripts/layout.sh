@@ -20,6 +20,23 @@ selected_text="${texts[0]}"
 current_line=1
 exit_loop=false
 
+# 根据当前链接文件确定初始 current_line 值
+for i in "${!files[@]}"; do
+	if [ -f "${files[$i]}" ] && [ "$(readlink -f "${files[$i]}")" = "$(readlink -f "$HOME/.config/hypr/custom/monitors.conf")" ]; then
+		current_line=$((i + 1))
+		selected_file="${files[$i]}"
+		selected_text="${texts[$i]}"
+		break
+	fi
+done
+
+# 如果没有匹配的链接文件，则默认选择第一个文件
+if [ $current_line -eq 0 ]; then
+	selected_file="${files[0]}"
+	selected_text="${texts[0]}"
+	current_line=1
+fi
+
 # 函数：显示菜单
 function show_menu() {
 	clear
@@ -65,9 +82,6 @@ function read_input() {
 			bash "$HOME/.config/hypr/scripts/swwwreload.sh"
 		fi
 		hyprctl reload
-		killall ags ydotool
-		nohup ags >/dev/null 2>&1 &
-		sleep 1
 		clear
 		# 显示结果
 		if [ $? -eq 0 ]; then
@@ -92,3 +106,7 @@ done
 
 # 链接配置文件
 ln -sf "$selected_file" "$HOME/.config/hypr/custom/monitors.conf"
+
+killall ags ydotool
+nohup ags >/dev/null 2>&1 &
+sleep 1
