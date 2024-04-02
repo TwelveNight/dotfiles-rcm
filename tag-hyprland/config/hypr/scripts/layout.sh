@@ -107,6 +107,8 @@ done
 # 链接配置文件
 ln -sf "$selected_file" "$HOME/.config/hypr/custom/monitors.conf"
 
+hyprctl reload
+
 killall ags ydotool
 nohup ags >/dev/null 2>&1 &
 sleep 1
