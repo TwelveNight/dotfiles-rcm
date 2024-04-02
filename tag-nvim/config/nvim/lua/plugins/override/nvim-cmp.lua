@@ -30,6 +30,12 @@ return {
         winhighlight = "Normal:PopMenu,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
       }
 
+      opts.view = {
+        entries = {
+          follow_cursor = true,
+        },
+      }
+
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
